@@ -20,24 +20,24 @@ const Header = () => {
           <nav className="flex justify-end mt-4">
             <ul className="flex gap-8 text-sm">
               <li>
-                <a href="#home" className="hover:text-blue-300">
+                <a href="#home" className="hover:text-blue-500">
                   About
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-blue-300">
+                <a href="#services" className="hover:text-blue-500">
                   Dining
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-blue-300">
+                <a href="#services" className="hover:text-blue-500">
                   Events
                 </a>
               </li>
               <li>
                 <a
                   href="#contact"
-                  className="hover:text-blue-300 border border-white p-2 px-4"
+                  className="hover:text-black hover:bg-white border border-white p-2 px-4"
                 >
                   Contact
                 </a>

@@ -21,9 +21,28 @@ const Footer = () => {
 
         <div className="flex flex-col gap-3 text-left p-6 items-start justify-between w-full h-full">
           <h3 className="text-xl font-bold">Location</h3>
-          <p className="w-full">
+          <div className="w-full flex gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+              />
+            </svg>
             7604 Wadi Hanifah St, Hijratlaban, 3451, Riyadh 12761
-          </p>
+          </div>
 
           <h3 className="text-xl font-bold">Connect with us</h3>
           <div className="flex gap-4">

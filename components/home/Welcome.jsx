@@ -38,17 +38,26 @@ const Welcome = () => {
           className="w-1/3 aspect-square object-cover object-top"
         />
       </div>
-      <div className="w-11/12 py-10 flex flex-col gap-12 items-center justify-center text-center">
-        <h2 className="text-5xl font-bold">Location that Speaks for itself</h2>
-        <div className="w-1/2 p-3 border-1 aspect-rect overflow-clip flex justify-center items-center">
-          <Image
-            src="/images/droneview.png"
-            alt="Welcome Image"
-            width={1400}
-            height={700}
-            className="w-full border object-cover"
-          />
+      <div className="w-11/12 mx-auto py-10 flex flex-col gap-12 items-center justify-center text-center">
+        <h2 className="text-5xl font-bold ">Location that Speaks for itself</h2>
+        <div className="flex items-center justify-center">
+          <div className="w-1/2 p-3 border-1 aspect-rect overflow-clip flex justify-center items-center">
+            <Image
+              src="/images/droneview.png"
+              alt="Welcome Image"
+              width={1400}
+              height={700}
+              className="w-full border object-cover"
+            />
+          </div>
+          <div className="w-1/6 px-2">
+            <p className="text-2xl leading-relaxed font-bold text-left">
+              In the calm of the wadi, far from the noise — yet close to
+              everything that matters.
+            </p>
+          </div>
         </div>
+        <div className=""></div>
       </div>
       <style jsx>{`
         .text-stroke {

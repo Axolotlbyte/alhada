@@ -4,10 +4,21 @@ const Games = () => {
   return (
     <section className="w-full">
       <div className="w-full flex h-screen">
-        <div className="w-2/3 h-screen bg-blue-900"></div>
+        <div className="w-2/3 h-screen bg-indigo-700 relative">
+          <div className="absolute top-1/4 -right-54 bottom-0">
+            <h2 className="text-6xl leading-relaxed font-extrabold text-white">
+              STRIKE.
+              <br />
+              SCORE.
+              <br />
+              CELEBRATE.
+              <br />
+            </h2>
+          </div>
+        </div>
         <div className="w-full h-screen">
           <Image
-            src="/images/contact.png"
+            src="/images/bowling.png"
             alt="Games Image"
             width={800}
             height={600}
