@@ -1,16 +1,16 @@
 import Image from "next/image";
 
-const Nav = () => {
+const Nav = ({ img, title }) => {
   return (
     <div className="w-full h-40 flex flex-col items-center justify-center font-bold gap-2 text-lg text-black">
       <Image
-        src="/icons/pool.png"
+        src={img}
         alt="Logo"
         width={240}
         height={240}
         className="w-20 h-20 object-cover"
       />
-      Pool
+      {title}
     </div>
   );
 };
@@ -44,11 +44,11 @@ const Hero = () => {
         {/* Navbar bottom */}
       </div>
       <div className="w-11/12 flex absolute bg-white/50 h-40 bottom-5 backdrop-blur-xs">
-        <Nav />
-        <Nav />
-        <Nav />
-        <Nav />
-        <Nav />
+        <Nav img={"/icons/pool.png"} title={"Pools"} />
+        <Nav img={"/icons/dumbbell.png"} title={"Gyms"} />
+        <Nav img={"/icons/dining.png"} title={"Dining"} />
+        <Nav img={"/icons/games.png"} title={"Games"} />
+        <Nav img={"/icons/services.png"} title={"Services"} />
       </div>
     </section>
   );

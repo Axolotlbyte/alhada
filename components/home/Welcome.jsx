@@ -17,35 +17,35 @@ const Welcome = () => {
       </div>
       <div className="w-full flex relative">
         <Image
-          src="/images/contact.png"
+          src="/images/room.png"
           alt="Welcome Image"
           width={800}
           height={600}
           className="w-1/3 aspect-square object-cover"
         />
         <Image
-          src="/images/contact.png"
+          src="/images/pool.png"
           alt="Welcome Image"
           width={800}
           height={600}
-          className="w-1/3 aspect-square object-cover"
+          className="w-1/3 aspect-square object-cover object-top"
         />
         <Image
-          src="/images/contact.png"
+          src="/images/gym.png"
           alt="Welcome Image"
           width={800}
           height={600}
-          className="w-1/3 aspect-square object-cover"
+          className="w-1/3 aspect-square object-cover object-top"
         />
       </div>
       <div className="w-11/12 py-10 flex flex-col gap-12 items-center justify-center text-center">
         <h2 className="text-5xl font-bold">Location that Speaks for itself</h2>
         <div className="w-1/2 p-3 border-1 aspect-rect overflow-clip flex justify-center items-center">
           <Image
-            src="/images/contact.png"
+            src="/images/droneview.png"
             alt="Welcome Image"
-            width={800}
-            height={600}
+            width={1400}
+            height={700}
             className="w-full border object-cover"
           />
         </div>
