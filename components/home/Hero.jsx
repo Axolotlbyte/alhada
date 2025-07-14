@@ -22,7 +22,7 @@ const Hero = () => {
       className="flex items-center w-full h-screen flex-col relative"
     >
       <div className="w-11/12 mt-32 flex flex-col">
-        <div className="w-1/3 h-fit flex flex-col gap-5 p-5 bg-black/65">
+        <div className="w-1/3 h-fit flex flex-col gap-5 p-5 backdrop-blur-sm bg-black/65">
           <h1 className="text-4xl text-white font-bold ">
             LIVE FULLY.
             <br />

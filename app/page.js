@@ -1,13 +1,21 @@
 import Contact from "@/components/home/Contact";
+import Games from "@/components/home/Games";
 import Hero from "@/components/home/Hero";
 import Services from "@/components/home/Services";
-import Image from "next/image";
+import Welcome from "@/components/home/Welcome";
+import Pools from "@/components/home/Pools";
+import Dining from "@/components/home/Dining";
+// import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-[family-name:var(--font-outfit)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="font-[family-name:var(--font-outfit)] w-full">
+      <main className="flex w-full flex-col row-start-2 items-center sm:items-start">
         <Hero />
+        <Welcome />
+        <Pools />
+        <Dining />
+        <Games />
         <Services />
         <Contact />
       </main>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Outfit } from "next/font/google";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -17,7 +18,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} antialiased`}>
+      <body className={`${outfit.variable} antialiased w-full`}>
+        <Header />
         {children}
         {/* <footer className="w-full h-fit flex flex-col">
           <div className="w-full p-1 my-6 bg-orange-300"></div>
