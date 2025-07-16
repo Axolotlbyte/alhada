@@ -19,22 +19,22 @@ const Header = () => {
         <div className="w-full">
           <nav className="flex justify-end mt-4">
             <ul className="flex gap-8 text-sm">
-              <li>
-                <a href="#home" className="hover:text-blue-500">
+              <li className="hover:scale-110 transition-transform duration-300">
+                <a href="#home" className="">
                   About
                 </a>
               </li>
-              <li>
-                <a href="#services" className="hover:text-blue-500">
+              <li className="hover:scale-110 transition-transform duration-300">
+                <a href="#services" className="">
                   Dining
                 </a>
               </li>
-              <li>
-                <a href="#services" className="hover:text-blue-500">
+              <li className="hover:scale-110 transition-transform duration-300">
+                <a href="#services" className="">
                   Events
                 </a>
               </li>
-              <li>
+              <li className="hover:scale-110 transition-transform duration-300">
                 <a
                   href="#contact"
                   className="hover:text-black hover:bg-white border border-white p-2 px-4"

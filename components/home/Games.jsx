@@ -1,5 +1,23 @@
 import Image from "next/image";
 
+const Card = ({ imageSrc, title }) => {
+  return (
+    <div className="flex flex-col hover:scale-105 transition-transform duration-300">
+      <div className="w-full h-80 bg-white">
+        <Image
+          src={imageSrc ? imageSrc : ""}
+          alt="Bowling"
+          width={800}
+          height={600}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="text-xl font-bold p-4 bg-white text-black text-center w-full">
+        {title}
+      </div>
+    </div>
+  );
+};
 const Games = () => {
   return (
     <section className="w-full">
@@ -29,9 +47,9 @@ const Games = () => {
 
       <div className="w-full bg-gradient-to-br from-blue-900 via-cyan-600 via-40% to-teal-500 text-white py-10">
         <div className="w-10/12 grid grid-cols-3 gap-8 mx-auto py-10">
-          <div className="w-full h-80 bg-white"></div>
-          <div className="w-full h-80 bg-white"></div>
-          <div className="w-full h-80 bg-white"></div>
+          <Card imageSrc={"/images/billiard.png"} title={"Billiard"} />
+          <Card imageSrc={"/images/bowlingSmall.png"} title={"Bowling"} />
+          <Card imageSrc={"/images/foosball.png"} title={"Foosball"} />
         </div>
       </div>
     </section>

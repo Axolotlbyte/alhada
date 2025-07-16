@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Dining = () => {
   return (
-    <section className="w-full flex flex-col gap-8 justify-center items-center py-8">
+    <section className="w-full flex flex-col gap-16 justify-center items-center py-8">
       <div className="w-11/12 text-center p-5 bg-red-800">
         <h1 className="text-5xl font-bold text-white">Dining</h1>
       </div>
@@ -65,9 +65,9 @@ const Dining = () => {
         </div>
       </div> */}
 
-      <div className="flex gap-16 w-11/12 items-stretch">
+      <div className="flex h-full bg-blue-500 gap-16 w-11/12 items-stretch justify-stretch">
         {/* side one */}
-        <div className="flex-1 gap-16 justify-between flex flex-col h-full">
+        <div className="flex-1 bg-red-500 gap-16 justify-between flex flex-col h-full">
           <div className="pt-8 w-full h-full flex-1 flex">
             <Image
               src="/images/restaurant.png"

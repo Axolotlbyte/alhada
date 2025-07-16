@@ -5,6 +5,7 @@ import Services from "@/components/home/Services";
 import Welcome from "@/components/home/Welcome";
 import Pools from "@/components/home/Pools";
 import Dining from "@/components/home/Dining";
+import Gym from "@/components/home/Gym";
 // import Image from "next/image";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <Welcome />
         <Pools />
+        <Gym />
         <Dining />
         <Games />
         <Services />
