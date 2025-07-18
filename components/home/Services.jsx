@@ -5,13 +5,13 @@ const ServiceCard = ({ reverse, img, title, desc }) => {
     <div
       className={"w-full flex flex-col md:flex-row gap-6 md:gap-10" + (reverse ? " md:flex-row-reverse" : "")}
     >
-      <div className="w-full">
+      <div className="w-full overflow-hidden">
         <Image
           src={img ? img : ""}
           alt="Service Image"
           width={800}
           height={600}
-          className="w-full h-auto object-cover"
+          className="w-full hover:scale-110 transition h-auto object-cover"
         />
       </div>
       <div className="text-left flex flex-col gap-4 w-full">

@@ -18,7 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} antialiased w-full`}>
+      <body
+        className={`${outfit.variable} antialiased bg-white text-black w-full`}
+      >
         <Header />
         {children}
         {/* <footer className="w-full h-fit flex flex-col">

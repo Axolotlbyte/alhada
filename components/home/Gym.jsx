@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Gym = () => {
   return (
-    <section className="w-full min-h-screen bg-[#005A5A]">
+    <section className="w-full min-h-screen overflow-hidden bg-[#005A5A]">
       <div
         style={{ backgroundImage: `url("/images/gym.png")` }}
         className="w-full flex items-center justify-center h-auto p-14 bg-center "
@@ -10,6 +10,7 @@ const Gym = () => {
         <h1 className="text-5xl font-bold text-white">Wellness Re-imagined</h1>
       </div>
       {/* Main section */}
+      <div className="w-1/2 h-full bg-blue-50"></div>
       <div className="w-full scale-50 rotate-90 md:rotate-none md:scale-100 flex relative h-[170vh] overflow-hidden">
         <div className="absolute top-[10vh] right-[10vh] h-[50vh] w-[35vh] bg-blue-900">
           <Image
@@ -20,7 +21,7 @@ const Gym = () => {
             className="object-cover absolute top-0 left-0 h-full w-full"
           />
           <div className="relative">
-            <div className="absolute -rotate-45 -left-[35vh] top-[10vh] h-[50vh] w-[35vh] bg-cyan-900">
+            <div className="absolute -rotate-45 -left-[35vh] top-[14vh] h-[50vh] w-[35vh] bg-cyan-900">
               <Image
                 src="/images/wellness/gym.png"
                 alt="Gym Equipment"

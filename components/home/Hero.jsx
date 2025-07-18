@@ -2,13 +2,13 @@ import Image from "next/image";
 
 const Nav = ({ img, title }) => {
   return (
-    <div className="w-full h-40 flex flex-col items-center justify-center font-bold gap-2 text-lg text-black">
+    <div className="w-full p-4 flex flex-col items-center justify-center font-bold gap-2 text-lg text-black">
       <Image
         src={img}
         alt="Logo"
         width={240}
         height={240}
-        className="w-20 h-20 object-cover"
+        className="w-14 h-14 object-cover"
       />
       {title}
     </div>
@@ -19,7 +19,7 @@ const Hero = () => {
   return (
     <section
       style={{ backgroundImage: "url('/Hero.png')" }}
-      className="flex items-center justify-end md:justify-normal w-full h-screen flex-col relative"
+      className="flex items-center bg-center bg-no-repeat justify-end md:justify-normal w-full h-screen flex-col relative"
     >
       <div className="w-11/12 my-6 md:mt-32 flex flex-col">
         <div className="w-full md:w-1/3 h-fit flex flex-col gap-5 p-5 backdrop-blur-sm bg-black/65">
@@ -43,7 +43,7 @@ const Hero = () => {
         </div>
         {/* Navbar bottom */}
       </div>
-      <div className="w-11/12 hidden md:flex absolute bg-white/50 h-40 bottom-5 backdrop-blur-xs">
+      <div className="w-11/12 hidden md:flex absolute bg-white/50 p-4 bottom-5 backdrop-blur-xs">
         <Nav img={"/icons/pool.png"} title={"Pools"} />
         <Nav img={"/icons/dumbbell.png"} title={"Gyms"} />
         <Nav img={"/icons/dining.png"} title={"Dining"} />
