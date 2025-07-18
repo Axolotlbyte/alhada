@@ -10,7 +10,7 @@ import Gym from "@/components/home/Gym";
 
 export default function Home() {
   return (
-    <div className="font-[family-name:var(--font-outfit)] w-full">
+    <div className="font-[family-name:var(--font-outfit)] w-full bg-white">
       <main className="flex w-full flex-col row-start-2 items-center sm:items-start">
         <Hero />
         <Welcome />
