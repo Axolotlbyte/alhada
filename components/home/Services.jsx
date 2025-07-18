@@ -3,7 +3,7 @@ import Image from "next/image";
 const ServiceCard = ({ reverse, img, title, desc }) => {
   return (
     <div
-      className={"w-full flex gap-10" + (reverse ? " flex-row-reverse" : "")}
+      className={"w-full flex flex-col md:flex-row gap-6 md:gap-10" + (reverse ? " md:flex-row-reverse" : "")}
     >
       <div className="w-full">
         <Image

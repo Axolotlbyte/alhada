@@ -21,10 +21,10 @@ const Card = ({ imageSrc, title }) => {
 const Games = () => {
   return (
     <section className="w-full">
-      <div className="w-full flex h-screen">
-        <div className="w-2/3 h-screen bg-indigo-700 relative">
-          <div className="absolute top-1/4 -right-54 bottom-0">
-            <h2 className="text-6xl leading-relaxed font-extrabold text-white">
+      <div className="w-full flex flex-col md:flex-row h-screen">
+        <div className=" w-full md:w-2/3 h-screen bg-indigo-700 relative">
+          <div className="absolute top-1/2 mx-auto left-0 right-0 md:top-1/4 md:-right-54 bottom-0">
+            <h2 className=" text-5xl md:text-6xl leading-relaxed font-extrabold text-white">
               STRIKE.
               <br />
               SCORE.
@@ -46,7 +46,7 @@ const Games = () => {
       </div>
 
       <div className="w-full bg-gradient-to-br from-blue-900 via-cyan-600 via-40% to-teal-500 text-white py-10">
-        <div className="w-10/12 grid grid-cols-3 gap-8 mx-auto py-10">
+        <div className=" w-11/12 md:w-10/12 grid grid-cols-3 gap-2 md:gap-8 mx-auto py-10">
           <Card imageSrc={"/images/billiard.png"} title={"Billiard"} />
           <Card imageSrc={"/images/bowlingSmall.png"} title={"Bowling"} />
           <Card imageSrc={"/images/foosball.png"} title={"Foosball"} />

@@ -19,11 +19,11 @@ const Hero = () => {
   return (
     <section
       style={{ backgroundImage: "url('/Hero.png')" }}
-      className="flex items-center w-full h-screen flex-col relative"
+      className="flex items-center justify-end md:justify-normal w-full h-screen flex-col relative"
     >
-      <div className="w-11/12 mt-32 flex flex-col">
-        <div className="w-1/3 h-fit flex flex-col gap-5 p-5 backdrop-blur-sm bg-black/65">
-          <h1 className="text-4xl text-white font-bold ">
+      <div className="w-11/12 my-6 md:mt-32 flex flex-col">
+        <div className="w-full md:w-1/3 h-fit flex flex-col gap-5 p-5 backdrop-blur-sm bg-black/65">
+          <h1 className="text-2xl md:text-4xl text-white font-bold ">
             LIVE FULLY.
             <br />
             NATURALLY.
@@ -43,7 +43,7 @@ const Hero = () => {
         </div>
         {/* Navbar bottom */}
       </div>
-      <div className="w-11/12 flex absolute bg-white/50 h-40 bottom-5 backdrop-blur-xs">
+      <div className="w-11/12 hidden md:flex absolute bg-white/50 h-40 bottom-5 backdrop-blur-xs">
         <Nav img={"/icons/pool.png"} title={"Pools"} />
         <Nav img={"/icons/dumbbell.png"} title={"Gyms"} />
         <Nav img={"/icons/dining.png"} title={"Dining"} />

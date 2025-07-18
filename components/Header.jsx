@@ -12,11 +12,11 @@ const Header = () => {
             height={90}
             className=" w-16 h-16 inline-block"
           />
-          <span className="text-2xl text-nowrap font-bold leading-relaxed ">
+          <span className="text-2xl hidden md:block text-nowrap font-bold leading-relaxed ">
             WADI AL HADA RESORT
           </span>
         </div>
-        <div className="w-full">
+        <div className="w-full hidden md:block">
           <nav className="flex justify-end mt-4">
             <ul className="flex gap-8 text-sm">
               <li className="hover:scale-110 transition-transform duration-300">

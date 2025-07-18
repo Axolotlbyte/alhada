@@ -18,7 +18,7 @@ const Contact = () => {
       style={{ backgroundImage: `url(${contactImg.src})` }}
       className="w-full bg-cover h-screen flex items-center justify-center"
     >
-      <div className="flex flex-col p-4 gap-8 items-center justify-center bg-black/60 bg-opacity-60 text-center h-fit w-1/2 bg-opacity-20">
+      <div className="flex flex-col p-4 gap-8 items-center justify-center bg-black/60 bg-opacity-60 text-center h-fit w-11/12 md:w-1/2 bg-opacity-20">
         <h1 className="text-2xl text-white font-bold">Contact Us</h1>
         <div className="flex w-full gap-4">
           <Input
