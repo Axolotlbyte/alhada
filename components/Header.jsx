@@ -16,6 +16,7 @@ const Header = () => {
             WADI AL HADA RESORT
           </span>
         </div>
+      
         <div className="w-full hidden md:block">
           <nav className="flex justify-end mt-4">
             <ul className="flex gap-8 text-sm">

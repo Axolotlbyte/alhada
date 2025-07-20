@@ -23,7 +23,7 @@ const Games = () => {
   return (
     <section className="w-full">
       <div className="w-full flex flex-col md:flex-row h-[70vh] md:h-screen">
-        <div className="w-full md:w-2/3 h-[30vh] md:h-screen bg-indigo-700 relative flex items-center justify-center">
+        <div className="w-full md:w-2/3 h-[30vh] md:h-screen bg-indigo-700 relative flex flex-col items-center justify-center">
           <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 md:static md:translate-y-0 md:top-1/4 md:right-10">
             <h2 className="text-3xl md:text-6xl leading-relaxed font-extrabold text-white text-center md:text-left px-4">
               STRIKE.
@@ -34,6 +34,9 @@ const Games = () => {
               <br />
             </h2>
           </div>
+          <p className="text-lg text-white w-1/2 font-semibold">
+            Our games lounge brings together fun, laughter and connection
+          </p>
         </div>
         <div className="w-full h-[40vh] md:h-screen">
           <Image

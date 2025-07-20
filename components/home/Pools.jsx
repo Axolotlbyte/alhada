@@ -34,6 +34,18 @@ const Pools = () => {
   return (
     <section className="w-full flex h-[calc(100vh-96px)] items-center justify-center bg-[#F7E2AB]">
       <div className="w-full mx-auto relative flex items-center justify-center bg-blue-700 overflow-hidden">
+        <div className="absolute flex items-center text-5xl font-bold justify-center aspect-square p-5 bg-black/60 border-1 border-white rounded-full top-1/12 left-1/12 z-50 text-white">
+          Swim.
+        </div>
+        <div className="absolute flex items-center text-4xl font-bold justify-center aspect-square p-5 bg-black/60 border-1 border-white rounded-full top-[28%] left-[22%] z-50 text-white">
+          Soak.
+        </div>
+        <div className="absolute flex items-center text-3xl font-bold justify-center aspect-square p-5 bg-black/60 border-1 border-white rounded-full top-[45%] left-1/8 z-50 text-white">
+          Relax.
+        </div>
+        <div className="w-fit p-2 rounded-sm bg-black/60 border border-white text-white absolute top-[75%] left-1/12">
+          <p>At Wadi Al Hada's luxury pools</p>
+        </div>
         <Image
           src={images[current].src}
           alt={images[current].alt}
@@ -42,7 +54,7 @@ const Pools = () => {
           className="w-full h-[60vh] md:h-[calc(100vh-96px)] object-cover transition-all duration-500"
         />
         {images[current].overlay && (
-          <div className="w-2/3 md:w-1/3 absolute left-2 top-2 md:left-6 md:top-6 h-5/6 md:h-11/12 bg-black/30">
+          <div className="w-2/3 md:w-1/3 hidden absolute left-2 top-2 md:left-6 md:top-6 h-5/6 md:h-11/12 bg-black/30">
             <h2 className="text-white text-2xl md:text-4xl font-bold p-4">
               Swim. <br />
               Soak. <br />

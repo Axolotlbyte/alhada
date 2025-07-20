@@ -22,7 +22,7 @@ const Hero = () => {
       className="flex items-center bg-center bg-no-repeat justify-end md:justify-normal w-full h-screen flex-col relative"
     >
       <div className="w-11/12 my-6 md:mt-32 flex flex-col">
-        <div className="w-full md:w-1/3 h-fit flex flex-col gap-5 p-5 backdrop-blur-sm bg-black/65">
+        <div className="w-full md:w-1/3 h-fit flex flex-col gap-5 p-5 rounded-sm backdrop-blur-sm bg-black/65">
           <h1 className="text-2xl md:text-4xl text-white font-bold ">
             LIVE FULLY.
             <br />
@@ -43,7 +43,7 @@ const Hero = () => {
         </div>
         {/* Navbar bottom */}
       </div>
-      <div className="w-11/12 hidden md:flex absolute bg-white/50 p-4 bottom-5 backdrop-blur-xs">
+      <div className="w-11/12 rounded-sm hidden md:flex absolute bg-white/50 p-4 bottom-5 backdrop-blur-xs">
         <Nav img={"/icons/pool.png"} title={"Pools"} />
         <Nav img={"/icons/dumbbell.png"} title={"Gyms"} />
         <Nav img={"/icons/dining.png"} title={"Dining"} />

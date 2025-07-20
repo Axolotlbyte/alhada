@@ -2,7 +2,7 @@
 import Image from "next/image";
 const Welcome = () => {
   return (
-    <section>
+    <section className="w-full">
       <div className="w-11/12 flex text-center flex-col py-8 md:py-16 gap-6 md:gap-8 mx-auto">
         <h1 className="w-full text-blue-900 drop-shadow-xl text-stroke py-6 md:py-8 font-bold text-3xl md:text-5xl">
           WELCOME TO WADI AL HADA RESORT
@@ -43,13 +43,13 @@ const Welcome = () => {
           Location that Speaks for itself
         </h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0">
-          <div className="w-full md:w-1/2 p-3 border aspect-[2/1] overflow-clip flex justify-center items-center">
+          <div className="w-full md:w-1/2 p-3 rounded-sm border aspect-[2/1] overflow-clip flex justify-center items-center">
             <Image
               src="/images/droneview.png"
               alt="Welcome Image"
               width={1400}
               height={700}
-              className="w-full border object-cover"
+              className="w-full border rounded-sm object-cover"
             />
           </div>
           <div className="w-full md:w-1/3 px-2 mt-4 md:mt-0">
@@ -59,6 +59,15 @@ const Welcome = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div className="w-full">
+        <Image
+          src="/images/welcome/welcome.png"
+          alt="Welcome Image"
+          width={1400}
+          height={700}
+          className="w-full h-auto object-cover"
+        />
       </div>
       <style jsx>{`
         .text-stroke {
