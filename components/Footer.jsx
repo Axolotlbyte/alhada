@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="w-full border-y-6 border-[#D4AA00] my-6 font-[family-name:var(--font-outfit)] h-fit flex ">
+    <footer className="w-full border-y-6 bg-white border-[#D4AA00] my-6 font-[family-name:var(--font-outfit)] h-fit flex ">
       {/* <div className="w-full p-1 my-6 bg-[#D4AA00]"></div> */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div className="flex flex-col gap-3 text-center p-6 items-center justify-center w-full ">

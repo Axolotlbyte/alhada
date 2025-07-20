@@ -57,7 +57,7 @@ const Services = () => {
   return (
     <section className="py-5">
       <div className="w-11/12 flex flex-col gap-12 mx-auto text-left">
-        <h1 className="text-4xl py-8 font-bold">On-site services</h1>
+        <h1 className="text-5xl py-8 font-bold text-black text-center">On-site services</h1>
         {data.map(({ img, title, desc }, index) => (
           <ServiceCard
             reverse={index % 2 !== 0}

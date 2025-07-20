@@ -38,8 +38,8 @@ const Welcome = () => {
           className="w-10/12 md:w-1/3 aspect-square object-cover object-top mx-auto md:mx-0"
         />
       </div>
-      <div className="w-11/12 mx-auto py-8 md:py-10 flex flex-col gap-8 md:gap-12 items-center justify-center text-center">
-        <h2 className="text-3xl md:text-5xl font-bold">
+      <div className="w-11/12 mx-auto py-8 text-black md:py-10 flex flex-col gap-8 md:gap-12 items-center justify-center text-center">
+        <h2 className="text-3xl md:text-5xl text-black font-bold">
           Location that Speaks for itself
         </h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0">
@@ -52,8 +52,8 @@ const Welcome = () => {
               className="w-full border rounded-sm object-cover"
             />
           </div>
-          <div className="w-full md:w-1/3 px-2 mt-4 md:mt-0">
-            <p className="text-lg md:text-2xl leading-relaxed font-bold text-left md:text-center">
+          <div className="w-full md:w-1/3 text-black px-2 mt-4 md:mt-0">
+            <p className="text-lg md:text-2xl text-black leading-relaxed font-bold text-left md:text-center">
               In the calm of the wadi, far from the noise — yet close to
               everything that matters.
             </p>
