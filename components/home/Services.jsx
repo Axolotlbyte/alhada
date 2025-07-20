@@ -3,7 +3,10 @@ import Image from "next/image";
 const ServiceCard = ({ reverse, img, title, desc }) => {
   return (
     <div
-      className={"w-full flex flex-col md:flex-row gap-6 md:gap-10" + (reverse ? " md:flex-row-reverse" : "")}
+      className={
+        "w-full flex flex-col text-black md:flex-row gap-6 md:gap-10" +
+        (reverse ? " md:flex-row-reverse" : "")
+      }
     >
       <div className="w-full overflow-hidden">
         <Image
@@ -14,9 +17,9 @@ const ServiceCard = ({ reverse, img, title, desc }) => {
           className="w-full hover:scale-110 transition h-auto object-cover"
         />
       </div>
-      <div className="text-left flex flex-col gap-4 w-full">
-        <h2 className="text-4xl font-bold">{title ? title : ""}</h2>
-        <p className="text-lg">{desc ? desc : ""}</p>
+      <div className="text-left text-black flex flex-col gap-4 w-full">
+        <h2 className="text-4xl text-black font-bold">{title ? title : ""}</h2>
+        <p className="text-lg text-black">{desc ? desc : ""}</p>
       </div>
     </div>
   );
