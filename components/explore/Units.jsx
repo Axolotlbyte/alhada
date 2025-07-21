@@ -1,26 +1,26 @@
 const units = [
   {
-    img: "/images/units/townhouse.png",
+    img: "/images/units/room.png",
     title: "Townhouses",
     desc: "Spacious multi-level homes with private gardens and modern amenities.",
   },
   {
-    img: "/images/units/4bed.png",
+    img: "/images/units/room.png",
     title: "4 Bedroom Apartment",
     desc: "Luxury apartments with four bedrooms, perfect for large families.",
   },
   {
-    img: "/images/units/3bed.png",
+    img: "/images/units/room.png",
     title: "3 Bedroom Apartment",
     desc: "Comfortable three-bedroom units with open living spaces.",
   },
   {
-    img: "/images/units/2bed.png",
+    img: "/images/units/room.png",
     title: "2 Bedroom Apartment",
     desc: "Ideal for small families or couples, featuring two bedrooms.",
   },
   {
-    img: "/images/units/1bed.png",
+    img: "/images/units/room.png",
     title: "1 Bedroom Apartment",
     desc: "Cozy one-bedroom apartments for singles or couples.",
   },
@@ -35,7 +35,7 @@ const Units = () => {
           {units.map((unit, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-sm shadow-lg overflow-hidden flex flex-col"
+              className="bg-white hover:scale-105 transition rounded-sm shadow-lg overflow-hidden flex flex-col"
             >
               <img
                 src={unit.img}

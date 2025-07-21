@@ -34,13 +34,13 @@ const Pools = () => {
   return (
     <section className="w-full flex h-[calc(100vh-96px)] items-center justify-center bg-[#F7E2AB]">
       <div className="w-full mx-auto relative flex items-center justify-center bg-blue-700 overflow-hidden">
-        <div className="absolute flex items-center text-5xl font-bold justify-center aspect-square p-5 bg-black/60 border-1 border-white rounded-full top-1/12 left-1/12 z-50 text-white">
+        <div className="absolute flex items-center text-5xl font-bold justify-center aspect-square p-5 bg-black/60 border-1 border-white rounded-full top-1/12 left-1/12 z-10 text-white">
           Swim.
         </div>
-        <div className="absolute flex items-center text-4xl font-bold justify-center aspect-square p-5 bg-black/60 border-1 border-white rounded-full top-[28%] left-[22%] z-50 text-white">
+        <div className="absolute flex items-center text-4xl font-bold justify-center aspect-square p-5 bg-black/60 border-1 border-white rounded-full top-[28%] left-[22%] z-10 text-white">
           Soak.
         </div>
-        <div className="absolute flex items-center text-3xl font-bold justify-center aspect-square p-5 bg-black/60 border-1 border-white rounded-full top-[45%] left-1/8 z-50 text-white">
+        <div className="absolute flex items-center text-3xl font-bold justify-center aspect-square p-5 bg-black/60 border-1 border-white rounded-full top-[45%] left-1/8 z-10 text-white">
           Relax.
         </div>
         <div className="w-fit p-2 rounded-sm bg-black/60 border border-white text-white absolute top-[75%] left-1/12">
