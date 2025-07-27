@@ -32,7 +32,7 @@ const Pools = () => {
   };
 
   return (
-    <section className="w-full flex h-[calc(100vh-96px)] items-center justify-center bg-[#F7E2AB]">
+    <section id="pools" className="w-full flex h-[calc(100vh-96px)] items-center justify-center bg-[#F7E2AB]">
       <div className="w-full mx-auto relative flex items-center justify-center bg-blue-700 overflow-hidden">
         <div className="absolute flex items-center text-5xl font-bold justify-center aspect-square p-5 bg-black/60 border-1 border-white rounded-full top-1/12 left-1/12 z-10 text-white">
           Swim.

@@ -1,14 +1,15 @@
 "use client";
 import { useState } from "react";
+import { Carousel } from "react-responsive-carousel";
 
 const unit = {
   title: "4 Bedroom Apartment",
   desc: "A spacious luxury apartment with four bedrooms, modern amenities, and beautiful views. Perfect for large families seeking comfort and style.",
   images: [
-    "/images/units/4bed-1.png",
-    "/images/units/4bed-2.png",
-    "/images/units/4bed-3.png",
-    "/images/units/4bed-4.png",
+    "/images/units/room.png",
+    "/images/units/room.png",
+    "/images/units/room.png",
+    "/images/units/room.png",
   ],
 };
 
@@ -27,8 +28,8 @@ export default function UnitPage() {
     <section className="w-full min-h-screen flex flex-col items-center justify-center bg-gray-50 py-8">
       <div className="w-11/12 max-w-3xl mx-auto flex flex-col md:flex-row gap-8 items-center">
         {/* Carousel */}
-        <div className="w-full md:w-2/3 flex flex-col items-center relative">
-          <div className="relative w-full h-[250px] md:h-[400px] rounded-xl overflow-hidden shadow-lg flex items-center justify-center bg-white">
+        <div className="w-full flex flex-col items-center relative">
+          <div className="relative w-full h-1/2 rounded-xl overflow-hidden shadow-lg flex items-center justify-center bg-white">
             <img
               src={unit.images[current]}
               alt={unit.title}
@@ -88,6 +89,34 @@ export default function UnitPage() {
           <h1 className="text-2xl md:text-3xl font-bold mb-4">{unit.title}</h1>
           <p className="text-gray-700 text-base md:text-lg">{unit.desc}</p>
         </div>
+      </div>
+
+      <div className="w-full h-fit">
+        <Carousel className="w-full h-screen">
+          <div className="w-full h-full">
+            <img
+              src={unit.images[0]}
+              alt={unit.title}
+              className="w-full h-full transition-all duration-500"
+            />
+          </div>
+
+          <div className="w-full">
+            <img
+              src={unit.images[0]}
+              alt={unit.title}
+              className="w-full h-full object-cover transition-all duration-500"
+            />
+          </div>
+
+          <div className="w-full">
+            <img
+              src={unit.images[0]}
+              alt={unit.title}
+              className="w-full h-full object-cover transition-all duration-500"
+            />
+          </div>
+        </Carousel>
       </div>
     </section>
   );

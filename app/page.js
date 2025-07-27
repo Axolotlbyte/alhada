@@ -6,11 +6,13 @@ import Welcome from "@/components/home/Welcome";
 import Pools from "@/components/home/Pools";
 import Dining from "@/components/home/Dining";
 import Gym from "@/components/home/Gym";
+import Header from "@/components/Header";
 // import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-outfit)] w-full bg-white">
+      <Header />
       <main className="flex w-full flex-col row-start-2 items-center sm:items-start">
         <Hero />
         <Welcome />

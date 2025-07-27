@@ -30,7 +30,9 @@ const Units = () => {
   return (
     <section className="w-full h-fit py-10">
       <div className="w-11/12 mx-auto">
-        <h2 className="text-2xl md:text-4xl py-4 font-bold text-black mb-8">Browse Units</h2>
+        <h2 className="text-2xl md:text-4xl py-4 font-bold text-black mb-8">
+          Browse Units
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {units.map((unit, idx) => (
             <div

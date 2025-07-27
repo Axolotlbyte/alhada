@@ -2,7 +2,10 @@ import Image from "next/image";
 
 const Gym = () => {
   return (
-    <section className="w-full min-h-screen overflow-hidden bg-[#005A5A]">
+    <section
+      id="gyms"
+      className="w-full min-h-screen overflow-hidden bg-[#005A5A]"
+    >
       <div
         style={{ backgroundImage: `url("/images/gym.png")` }}
         className="w-full flex items-center justify-center h-auto p-14 bg-center "
@@ -71,7 +74,8 @@ const Gym = () => {
           <h2 className="text-5xl p-5 px-6 font-bold text-white">
             {" "}
             Recharge <br />
-            your mind <br /> and body
+            your mind <br /> 
+            and body
           </h2>
           <Image
             src={"/images/gym/plant.png"}
@@ -89,7 +93,7 @@ const Gym = () => {
         </div>
 
         <div className="w-full scale-50 rotate-90 md:rotate-none md:scale-100 flex relative h-[100vw] md:h-[170vh] overflow-visible ">
-          <div className="absolute hover:scale-110 transition overflow-hidden top-[10vh] right-[10vh] h-[50vh] w-[35vh] bg-blue-900">
+          <div className="absolute scale-50 md:scale-75 lg:scale-80 xl:scale-100 hover:scale-110 transition overflow-hidden top-[10vh] right-[10vh] h-[50vh] w-[35vh] bg-blue-900">
             <Image
               src="/images/wellness/spa.png"
               alt="Gym Equipment"
@@ -98,7 +102,7 @@ const Gym = () => {
               className="object-cover absolute top-0 left-0 h-full w-full"
             />
           </div>
-          <div className="absolute hover:scale-110 transition  -rotate-45 right-[40vh] top-[25vh] h-[50vh] w-[35vh] bg-cyan-900">
+          <div className="absolute scale-50 md:scale-75 lg:scale-80 xl:scale-100 hover:scale-110 transition  -rotate-45 right-[40vh] top-[25vh] h-[50vh] w-[35vh] bg-cyan-900">
             <Image
               src="/images/wellness/gym.png"
               alt="Gym Equipment"
@@ -107,7 +111,7 @@ const Gym = () => {
               className="object-cover absolute top-0 left-0 h-full w-full"
             />
           </div>
-          <div className="absolute hover:scale-110 transition  -rotate-90 right-[52vh] top-[52vh] h-[50vh] w-[35vh] bg-teal-900">
+          <div className="absolute scale-50 md:scale-75 lg:scale-80 xl:scale-100 hover:scale-110 transition  -rotate-90 right-[52vh] top-[52vh] h-[50vh] w-[35vh] bg-teal-900">
             <Image
               src="/images/wellness/sauna.png"
               alt="Gym Equipment"
@@ -116,7 +120,7 @@ const Gym = () => {
               className="object-cover absolute top-0 left-0 h-full w-full"
             />
           </div>
-          <div className="absolute hover:scale-110 transition  -rotate-135 right-[40vh] top-[80vh] h-[50vh] w-[35vh] bg-emerald-900">
+          <div className="absolute scale-50 md:scale-75 lg:scale-80 xl:scale-100 hover:scale-110 transition  -rotate-135 right-[40vh] top-[80vh] h-[50vh] w-[35vh] bg-emerald-900">
             <Image
               src="/images/wellness/pool.png"
               alt="Gym Equipment"
@@ -125,7 +129,7 @@ const Gym = () => {
               className="object-cover absolute top-0 left-0 h-full w-full"
             />
           </div>
-          <div className="absolute hover:scale-110 transition -rotate-180 right-[10vh] top-[94vh] h-[50vh] w-[35vh] bg-green-900">
+          <div className="absolute scale-50 md:scale-75 lg:scale-80 xl:scale-100 hover:scale-110 transition -rotate-180 right-[10vh] top-[94vh] h-[50vh] w-[35vh] bg-green-900">
             <Image
               src="/images/wellness/yoga.png"
               alt="Gym Equipment"

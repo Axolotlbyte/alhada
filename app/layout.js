@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Outfit } from "next/font/google";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Footer from "@/components/Footer";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -21,7 +22,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${outfit.variable} antialiased bg-white text-black w-full`}
       >
-        <Header />
+        {/* <Header /> */}
         {children}
         {/* <footer className="w-full h-fit flex flex-col">
           <div className="w-full p-1 my-6 bg-orange-300"></div>

@@ -1,8 +1,14 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="bg-black/40 backdrop-blur-lg fixed h-24 z-50 top-0 left-0 w-screen text-white py-4">
+    <header
+      className={"bg-black/40 backdrop-blur-lg transition-all duration-500 ease-in-out fixed min-h-24 z-50 top-0 left-0 w-screen text-white py-4" + (isOpen ? " h-60 overflow-hidden" : " h-24")}
+    >
       <div className="w-11/12 mx-auto flex">
         <div className="flex gap-4 items-center">
           <Image
@@ -16,7 +22,43 @@ const Header = () => {
             WADI AL HADA RESORT
           </span>
         </div>
-      
+
+        <div className="w-full flex items-center justify-end md:hidden">
+          <button className="p-2" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-7"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-7"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
+
         <div className="w-full hidden md:block">
           <nav className="flex justify-end mt-4">
             <ul className="flex gap-8 text-sm">
@@ -47,6 +89,14 @@ const Header = () => {
           </nav>
         </div>
       </div>
+
+      {isOpen ? (
+        <>
+          <div className="h-14 mt-2 border-b w-full bg-black/50"></div>
+          <div className="h-14 w-full border-b bg-black/50"></div>
+          <div className="h-14 w-full border-b bg-black/50"></div>{" "}
+        </>
+      ) : null}
     </header>
   );
 };
