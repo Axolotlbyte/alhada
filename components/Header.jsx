@@ -7,7 +7,10 @@ const Header = () => {
 
   return (
     <header
-      className={"bg-black/40 backdrop-blur-lg transition-all duration-500 ease-in-out fixed min-h-24 z-50 top-0 left-0 w-screen text-white py-4" + (isOpen ? " h-60 overflow-hidden" : " h-24")}
+      className={
+        "bg-black/40 backdrop-blur-lg transition-all duration-500 ease-in-out fixed min-h-24 z-50 top-0 left-0 w-screen text-white py-4" +
+        (isOpen ? " h-80 overflow-hidden" : " h-24")
+      }
     >
       <div className="w-11/12 mx-auto flex">
         <div className="flex gap-4 items-center">
@@ -92,9 +95,18 @@ const Header = () => {
 
       {isOpen ? (
         <>
-          <div className="h-14 mt-2 border-b w-full bg-black/50"></div>
-          <div className="h-14 w-full border-b bg-black/50"></div>
-          <div className="h-14 w-full border-b bg-black/50"></div>{" "}
+          <div className="h-14 mt-2 flex items-center justify-center border-b w-full bg-black/50">
+            About
+          </div>
+          <div className="h-14 flex items-center justify-center w-full border-b bg-black/50">
+            Dining
+          </div>
+          <div className="h-14 flex items-center justify-center w-full border-b bg-black/50">
+            Events
+          </div>
+          <div className="h-14 flex items-center justify-center w-full border-b bg-black/50">
+            Contact
+          </div>{" "}
         </>
       ) : null}
     </header>

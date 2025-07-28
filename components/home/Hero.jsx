@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Nav = ({ img, title }) => {
   return (
-    <div className="w-full p-4 flex flex-col items-center justify-center font-bold gap-2 text-lg text-white">
+    <div className="w-full hover:scale-105 transition-all duration-300 active:scale-100 p-4 flex flex-col items-center justify-center font-bold gap-2 text-lg text-white">
       <Image
         src={img}
         alt="Logo"
@@ -24,8 +24,7 @@ const Hero = () => {
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50 z-0 pointer-events-none" />
-      
-      
+
       <div className="w-11/12 flex flex-col">
         <div className="w-full md:w-1/2 lg:w-1/2 xl:w-1/3 h-fit flex flex-col gap-5 p-5 rounded-sm backdrop-blur-sm bg-black/65">
           <h1 className="text-2xl md:text-4xl leading-normal text-white font-bold ">

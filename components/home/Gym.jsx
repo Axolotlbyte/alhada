@@ -10,71 +10,44 @@ const Gym = () => {
         style={{ backgroundImage: `url("/images/gym.png")` }}
         className="w-full flex items-center justify-center h-auto p-14 bg-center "
       >
-        <h1 className="text-5xl font-bold text-white">Wellness Re-imagined</h1>
+        <h1 className=" text-3xl text-nowrap md:text-5xl font-bold text-white">
+          Wellness Re-imagined
+        </h1>
       </div>
       {/* Main section */}
-      <div className="w-1/2 h-full flex bg-blue-50"></div>
-      {/* <div className="w-full scale-50 rotate-90 md:rotate-none md:scale-100 flex relative h-[170vh] overflow-hidden">
-        <div className="absolute top-[10vh] right-[10vh] h-[50vh] w-[35vh] bg-blue-900">
+
+      {/* Mobile */}
+      <div className="w-11/12 md:hidden relative py-6 mx-auto">
+        <div className="w-full">
           <Image
-            src="/images/wellness/spa.png"
-            alt="Gym Equipment"
-            width={500}
+            src={"/images/gym/lifting.png"}
+            alt="Gym Plant"
+            width={800}
             height={500}
-            className="object-cover absolute top-0 left-0 h-full w-full"
+            className="w-full rounded-sm h-auto object-cover"
           />
-          <div className="relative">
-            <div className="absolute -rotate-45 -left-[35vh] top-[14vh] h-[50vh] w-[35vh] bg-cyan-900">
-              <Image
-                src="/images/wellness/gym.png"
-                alt="Gym Equipment"
-                width={500}
-                height={500}
-                className="object-cover absolute top-0 left-0 h-full w-full"
-              />
-              <div className="relative">
-                <div className="absolute -rotate-45 -left-[25vh] top-[15vh] h-[50vh] w-[35vh] bg-teal-900">
-                  <Image
-                    src="/images/wellness/sauna.png"
-                    alt="Gym Equipment"
-                    width={500}
-                    height={500}
-                    className="object-cover absolute top-0 left-0 h-full w-full"
-                  />
-                  <div className="relative">
-                    <div className="absolute -rotate-45 -left-[35vh] top-[10vh] h-[50vh] w-[35vh] bg-emerald-900">
-                      <Image
-                        src="/images/wellness/pool.png"
-                        alt="Gym Equipment"
-                        width={500}
-                        height={500}
-                        className="object-cover absolute top-0 left-0 h-full w-full"
-                      />
-                      <div className="relative">
-                        <div className="absolute -rotate-45 -left-[35vh] top-[10vh] h-[50vh] w-[35vh] bg-green-900">
-                          <Image
-                            src="/images/wellness/yoga.png"
-                            alt="Gym Equipment"
-                            width={500}
-                            height={500}
-                            className="object-cover absolute top-0 left-0 h-full w-full"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+          <h2 className="pt-4 text-2xl md:text-4xl font-bold text-white">
+            Well Equipped Gyms
+          </h2>
+
+          <div className="relative flex items-center">
+            <p className="w-full py-10 text-white">
+              Whether you’re lifting, stretching or simply unwinding - Wadi al
+              hada supports your full wellness journey
+            </p>
           </div>
+
         </div>
-      </div> */}
-      <div className="flex flex-col-reverse md:flex-row w-full">
+      </div>
+
+      {/* Bigger screens */}
+      <div className="flex-col-reverse hidden md:flex md:flex-row w-full">
         <div className="w-full relative h-[50vh] md:h-[170vh] justify-center flex flex-col">
           <h2 className="text-5xl p-5 px-6 font-bold text-white">
             {" "}
             Recharge <br />
-            your mind <br /> 
+            your mind <br />
             and body
           </h2>
           <Image
