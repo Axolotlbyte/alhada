@@ -1,9 +1,25 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
-const Nav = ({ img, title }) => {
+const Nav = ({ img, title, lId }) => {
+  // const scrollToSection = (id) => {
+  //   const element = document.getElementById(id);
+  //   element?.scrollIntoView({ behavior: "smooth" });
+  // };
+
+  const scroll2El = () => {
+    window.scrollTo({
+      top: document.getElementById(`${lId}`).offsetTop - 94,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div className="w-full hover:scale-105 transition-all duration-300 active:scale-100 p-4 flex flex-col items-center justify-center font-bold gap-2 text-lg text-white">
+    <button
+      onClick={() => scroll2El()}
+      className="w-full hover:scale-105 transition-all duration-300 active:scale-100 p-4 flex flex-col items-center justify-center font-bold gap-2 text-lg text-white"
+    >
       <Image
         src={img}
         alt="Logo"
@@ -12,13 +28,14 @@ const Nav = ({ img, title }) => {
         className="w-14 h-14 object-cover invert"
       />
       {title}
-    </div>
+    </button>
   );
 };
 
 const Hero = () => {
   return (
     <section
+      id={"hero"}
       style={{ backgroundImage: "url('/Hero.png')" }}
       className="flex items-center gap-6 bg-center bg-no-repeat justify-end md:justify-normal w-full h-fit py-14 pt-30 flex-col relative"
     >
@@ -50,11 +67,11 @@ const Hero = () => {
         {/* Navbar bottom */}
       </div>
       <div className="w-11/12 rounded-sm hidden md:flex  bg-black/65 p-4 bottom-5 backdrop-blur-xs">
-        <Nav img={"/icons/pool.png"} title={"Pools"} />
-        <Nav img={"/icons/dumbbell.png"} title={"Gyms"} />
-        <Nav img={"/icons/dining.png"} title={"Dining"} />
-        <Nav img={"/icons/games.png"} title={"Games"} />
-        <Nav img={"/icons/services.png"} title={"Services"} />
+        <Nav img={"/icons/pool.png"} lId={"pools"} title={"Pools"} />
+        <Nav img={"/icons/dumbbell.png"} lId={"gyms"} title={"Gyms"} />
+        <Nav img={"/icons/dining.png"} lId={"dining"} title={"Dining"} />
+        <Nav img={"/icons/games.png"} lId={"games"} title={"Games"} />
+        <Nav img={"/icons/services.png"} lId={"services"} title={"Services"} />
       </div>
     </section>
   );

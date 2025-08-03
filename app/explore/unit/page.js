@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Carousel } from "react-responsive-carousel";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const unit = {
   title: "4 Bedroom Apartment",
@@ -11,6 +12,34 @@ const unit = {
     "/images/units/room.png",
     "/images/units/room.png",
   ],
+};
+
+const responsive = {
+  desktop: {
+    breakpoint: {
+      max: 3000,
+      min: 1024,
+    },
+    items: 2,
+    partialVisibilityGutter: 40,
+  },
+
+  tablet: {
+    breakpoint: {
+      max: 1024,
+      min: 464,
+    },
+    items: 2,
+    partialVisibilityGutter: 30,
+  },
+  mobile: {
+    breakpoint: {
+      max: 464,
+      min: 0,
+    },
+    items: 1,
+    partialVisibilityGutter: 30,
+  },
 };
 
 export default function UnitPage() {
@@ -92,7 +121,59 @@ export default function UnitPage() {
       </div>
 
       <div className="w-full h-fit">
-        <Carousel className="w-full h-screen">
+        <Carousel
+          additionalTransfrom={0}
+          arrows
+          autoPlaySpeed={3000}
+          centerMode
+          className=""
+          containerClass="container"
+          dotListClass=""
+          draggable
+          focusOnSelect={false}
+          infinite
+          itemClass="p-4"
+          keyBoardControl
+          minimumTouchDrag={80}
+          pauseOnHover
+          renderArrowsWhenDisabled={false}
+          renderButtonGroupOutside={false}
+          renderDotsOutside={false}
+          responsive={{
+            desktop: {
+              breakpoint: {
+                max: 3000,
+                min: 1024,
+              },
+              items: 3,
+              partialVisibilityGutter: 40,
+            },
+            mobile: {
+              breakpoint: {
+                max: 464,
+                min: 0,
+              },
+              items: 1,
+              partialVisibilityGutter: 30,
+            },
+            tablet: {
+              breakpoint: {
+                max: 1024,
+                min: 464,
+              },
+              items: 2,
+              partialVisibilityGutter: 30,
+            },
+          }}
+          rewind={false}
+          rewindWithAnimation={false}
+          rtl={false}
+          shouldResetAutoplay
+          showDots={false}
+          sliderClass=""
+          slidesToSlide={1}
+          swipeable
+        >
           <div className="w-full h-full">
             <img
               src={unit.images[0]}
@@ -100,7 +181,6 @@ export default function UnitPage() {
               className="w-full h-full transition-all duration-500"
             />
           </div>
-
           <div className="w-full">
             <img
               src={unit.images[0]}
@@ -108,7 +188,13 @@ export default function UnitPage() {
               className="w-full h-full object-cover transition-all duration-500"
             />
           </div>
-
+          <div className="w-full">
+            <img
+              src={unit.images[0]}
+              alt={unit.title}
+              className="w-full h-full object-cover transition-all duration-500"
+            />
+          </div>
           <div className="w-full">
             <img
               src={unit.images[0]}

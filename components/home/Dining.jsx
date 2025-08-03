@@ -1,6 +1,53 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css"; // Ensure you have this import for carousel styles
+
+const Card = ({ num }) => {
+  return (
+    <div className="w-full h-fit p-2 flex flex-col gap-2 bg-black text-white backdrop-blur-lg rounded-sm">
+      <div>
+        <Image
+          src={"/images/bowling.png"}
+          height={2000}
+          width={2000}
+          className="w-full bg-cover"
+          alt="testing"
+        />
+      </div>
+      <h2 className="text-xl font-bold">{num} International Cuisines</h2>
+      <p className="text-md">Available at your convenience, in the resort.</p>
+    </div>
+  );
+};
+const responsive = {
+  desktop: {
+    breakpoint: {
+      max: 3000,
+      min: 1024,
+    },
+    items: 2,
+    partialVisibilityGutter: 40,
+  },
+
+  tablet: {
+    breakpoint: {
+      max: 1024,
+      min: 464,
+    },
+    items: 2,
+    partialVisibilityGutter: 30,
+  },
+  mobile: {
+    breakpoint: {
+      max: 464,
+      min: 0,
+    },
+    items: 1,
+    partialVisibilityGutter: 30,
+  },
+};
 
 const dishImages = [
   {
@@ -190,9 +237,84 @@ const Dining = () => {
     //   </div>
     // </section>
 
-    <section className="w-full flex relative min-h-screen flex-col gap-16 ">
-      <div className="w-full text-center py-16">
-        <div className="w-11/12 max-w-3xl mx-auto mb-16 text-center">
+    // <section className="w-full flex relative min-h-screen flex-col gap-16 ">
+    //   <div className="w-full text-center py-16">
+    //     <div className="w-11/12 max-w-3xl mx-auto mb-16 text-center">
+    //       <h1 className="text-3xl md:text-5xl font-bold text-black mb-4">
+    //         Exceptional Dining & Food
+    //       </h1>
+    //       <p className="text-lg md:text-xl text-gray-800">
+    //         Enjoy a curated menu of global dishes in our beautiful restaurant
+    //         setting.
+    //       </p>
+    //     </div>
+    //     <div className="flex md:flex-row gap-6 flex-col">
+    //       <div className="w-full md:w-1/2 overflow-hidden shadow-lg">
+    //         <Image
+    //           src="/images/restaurant.png"
+    //           alt="Restaurant"
+    //           width={800}
+    //           height={600}
+    //           className="w-full h-full object-cover"
+    //         />
+    //       </div>
+    //       {/* Dishes Carousel */}
+    //       <div className="w-full md:w-1/2 flex flex-col items-center">
+    //         <div className="relative w-full h-[250px] md:h-[400px] overflow-hidden shadow-lg flex items-center justify-center bg-white">
+    //           <Image
+    //             src={dishImages[current].src}
+    //             alt={dishImages[current].alt}
+    //             width={800}
+    //             height={600}
+    //             className="w-full h-full object-cover transition-all duration-500"
+    //           />
+    //           {/* Left Arrow */}
+    //           <button
+    //             onClick={prevSlide}
+    //             className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full p-2 z-10 hover:bg-black/70 transition"
+    //             aria-label="Previous"
+    //           >
+    //             &#8592;
+    //           </button>
+    //           {/* Right Arrow */}
+    //           <button
+    //             onClick={nextSlide}
+    //             className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full p-2 z-10 hover:bg-black/70 transition"
+    //             aria-label="Next"
+    //           >
+    //             &#8594;
+    //           </button>
+    //           {/* Dots */}
+    //           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+    //             {dishImages.map((_, idx) => (
+    //               <button
+    //                 key={idx}
+    //                 onClick={() => setCurrent(idx)}
+    //                 className={`w-3 h-3 rounded-full ${
+    //                   current === idx ? "bg-black" : "bg-gray-400"
+    //                 } border border-white`}
+    //                 aria-label={`Go to slide ${idx + 1}`}
+    //               />
+    //             ))}
+    //           </div>
+    //         </div>
+    //         <div className="mt-4 text-center">
+    //           <h2 className="text-xl md:text-2xl font-bold text-indigo-900">
+    //             Explore Our Dishes
+    //           </h2>
+    //           <p className="text-gray-700 mt-2">Use arrows to see more!</p>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </section>
+
+    <section
+      id={"dining"}
+      className="w-full flex relative min-h-screen flex-col gap-16 py-16 "
+    >
+      <div className="w-full text-center">
+        <div className="w-11/12 max-w-3xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl font-bold text-black mb-4">
             Exceptional Dining & Food
           </h1>
@@ -201,64 +323,75 @@ const Dining = () => {
             setting.
           </p>
         </div>
-        <div className="flex md:flex-row gap-6 flex-col">
-          <div className="w-full md:w-1/2 overflow-hidden shadow-lg">
-            <Image
-              src="/images/restaurant.png"
-              alt="Restaurant"
-              width={800}
-              height={600}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          {/* Dishes Carousel */}
-          <div className="w-full md:w-1/2 flex flex-col items-center">
-            <div className="relative w-full h-[250px] md:h-[400px] overflow-hidden shadow-lg flex items-center justify-center bg-white">
-              <Image
-                src={dishImages[current].src}
-                alt={dishImages[current].alt}
-                width={800}
-                height={600}
-                className="w-full h-full object-cover transition-all duration-500"
-              />
-              {/* Left Arrow */}
-              <button
-                onClick={prevSlide}
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full p-2 z-10 hover:bg-black/70 transition"
-                aria-label="Previous"
-              >
-                &#8592;
-              </button>
-              {/* Right Arrow */}
-              <button
-                onClick={nextSlide}
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full p-2 z-10 hover:bg-black/70 transition"
-                aria-label="Next"
-              >
-                &#8594;
-              </button>
-              {/* Dots */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                {dishImages.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setCurrent(idx)}
-                    className={`w-3 h-3 rounded-full ${
-                      current === idx ? "bg-black" : "bg-gray-400"
-                    } border border-white`}
-                    aria-label={`Go to slide ${idx + 1}`}
-                  />
-                ))}
-              </div>
-            </div>
-            <div className="mt-4 text-center">
-              <h2 className="text-xl md:text-2xl font-bold text-indigo-900">
-                Explore Our Dishes
-              </h2>
-              <p className="text-gray-700 mt-2">Use arrows to see more!</p>
-            </div>
-          </div>
-        </div>
+      </div>
+
+      {/* carousel */}
+      <div>
+        <Carousel
+          additionalTransfrom={0}
+          arrows
+          autoPlaySpeed={3000}
+          autoPlay
+          centerMode={true}
+          className="gap-6 flex"
+          containerClass="container-with-dots"
+          dotListClass=""
+          draggable
+          focusOnSelect
+          infinite
+          itemClass="p-2"
+          keyBoardControl
+          minimumTouchDrag={80}
+          pauseOnHover
+          renderArrowsWhenDisabled={false}
+          renderButtonGroupOutside={false}
+          renderDotsOutside={false}
+          beforeChange={function (nextSlide, _ref2) {
+            var currentSlide = _ref2.currentSlide;
+            _ref2.onMove;
+            return console.log(
+               currentSlide
+            );
+          }}
+          responsive={{
+            desktop: {
+              breakpoint: {
+                max: 3000,
+                min: 1024,
+              },
+              items: 3,
+              partialVisibilityGutter: 40,
+            },
+            mobile: {
+              breakpoint: {
+                max: 464,
+                min: 0,
+              },
+              items: 1,
+              partialVisibilityGutter: 30,
+            },
+            tablet: {
+              breakpoint: {
+                max: 1024,
+                min: 464,
+              },
+              items: 3,
+              partialVisibilityGutter: 30,
+            },
+          }}
+          rewind={false}
+          rewindWithAnimation={false}
+          rtl={false}
+          shouldResetAutoplay
+          showDots={false}
+          sliderClass=""
+          slidesToSlide={1}
+          swipeable
+        >
+          <Card num={"1"} />
+          <Card num={"2"} />
+          <Card num={"3"} />
+        </Carousel>
       </div>
     </section>
   );

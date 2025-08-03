@@ -37,7 +37,6 @@ const Gym = () => {
               hada supports your full wellness journey
             </p>
           </div>
-
         </div>
       </div>
 
