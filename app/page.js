@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <div className="font-[family-name:var(--font-outfit)] w-full bg-white">
-      <Header />
+      <Header home />
       <main className="flex w-full flex-col row-start-2 items-center sm:items-start">
         <Hero />
         <Welcome />

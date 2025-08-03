@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="hero h-auto relative">
+    <section className="hero h-fit relative">
       <div className="text-center">
         {/* <h1 className="text-5xl font-bold">Explore</h1> */}
         <Image
@@ -13,8 +13,8 @@ const Hero = () => {
           className="w-full h-auto object-cover"
         />
       </div>
-      <div className="absolute top-0 left-0 w-full h-full flex justify-center items-end mt-6">
-        <button className="bg-white rounded-t-full text-black p-5">
+      {/* <div className="absolute bottom-0 left-0 w-full h-full flex justify-center items-end">
+        <button className="bg-white rounded-full text-black p-2 md:p-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -30,7 +30,7 @@ const Hero = () => {
             />
           </svg>
         </button>
-      </div>
+      </div> */}
     </section>
   );
 };

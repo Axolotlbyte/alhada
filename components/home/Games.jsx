@@ -63,7 +63,7 @@ const Games = () => {
       </div>
 
       <div className="w-full text-white overflow-hidden">
-        <div className="w-full grid grid-cols-2 gap-1 p-1 md:grid-cols-3 mx-auto">
+        <div className="w-11/12 grid grid-cols-2 gap-1 p-1 px-0 md:grid-cols-3 mx-auto">
           <Card imageSrc={"/images/billiard.png"} title={"Billiard"} />
           <Card imageSrc={"/images/bowlingSmall.png"} title={"Bowling"} />
           <Card imageSrc={"/images/foosball.png"} title={"Foosball"} />

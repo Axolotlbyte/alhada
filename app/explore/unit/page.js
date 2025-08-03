@@ -1,4 +1,5 @@
 "use client";
+import Header from "@/components/Header";
 import { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -54,8 +55,9 @@ export default function UnitPage() {
   };
 
   return (
-    <section className="w-full min-h-screen flex flex-col items-center justify-center bg-gray-50 py-8">
-      <div className="w-11/12 max-w-3xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+    <main className="w-full overflow-hidden min-h-screen flex flex-col items-center justify-center bg-gray-50">
+      <Header />
+      <div className="w-11/12 py-8 max-w-3xl mx-auto flex flex-col md:flex-row gap-8 items-center">
         {/* Carousel */}
         <div className="w-full flex flex-col items-center relative">
           <div className="relative w-full h-1/2 rounded-xl overflow-hidden shadow-lg flex items-center justify-center bg-white">
@@ -204,6 +206,6 @@ export default function UnitPage() {
           </div>
         </Carousel>
       </div>
-    </section>
+    </main>
   );
 }

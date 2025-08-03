@@ -2,14 +2,15 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const Header = () => {
+const Header = ({home}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header
       className={
-        "bg-black/40 backdrop-blur-lg transition-all duration-500 ease-in-out fixed min-h-24 z-[10000] top-0 left-0 w-screen text-white py-4" +
-        (isOpen ? " h-80 overflow-hidden" : " h-24")
+        " transition-all duration-500 ease-in-out min-h-24 z-[10000] top-0 left-0 w-screen py-4" +
+        (isOpen ? " h-80 overflow-hidden" : " h-24") +
+        (home ? " bg-black/40 backdrop-blur-lg fixed text-white" : " text-black border-b")
       }
     >
       <div className="w-11/12 mx-auto flex">
