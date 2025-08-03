@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Card = ({ imageSrc, title }) => {
   return (
-    <div className="flex flex-col group overflow-hidden duration-300">
+    <div className="relative rounded-sm flex flex-col group overflow-hidden duration-300">
       <div className="w-full z-0 group-hover:scale-105 transition-transform h-48 md:h-80 bg-white">
         <Image
           src={imageSrc ? imageSrc : ""}
@@ -12,6 +12,8 @@ const Card = ({ imageSrc, title }) => {
           className="w-full h-full object-cover"
         />
       </div>
+
+      <div className="w-full h-full absolute bg-black/20 flex items-center justify-center font-bold text-4xl">Squash</div>
       {/* <div className="text-lg z-10 md:text-xl font-bold p-2 md:p-4 bg-white text-black text-center w-full">
         {title}
       </div> */}
@@ -60,7 +62,7 @@ const Games = () => {
         </div>
       </div>
 
-      <div className="w-full bg-gradient-to-br from-blue-900 via-cyan-600 via-40% to-teal-500 text-white overflow-hidden">
+      <div className="w-full text-white overflow-hidden">
         <div className="w-full grid grid-cols-2 gap-1 p-1 md:grid-cols-3 mx-auto">
           <Card imageSrc={"/images/billiard.png"} title={"Billiard"} />
           <Card imageSrc={"/images/bowlingSmall.png"} title={"Bowling"} />

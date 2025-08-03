@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header
       className={
-        "bg-black/40 backdrop-blur-lg transition-all duration-500 ease-in-out fixed min-h-24 z-50 top-0 left-0 w-screen text-white py-4" +
+        "bg-black/40 backdrop-blur-lg transition-all duration-500 ease-in-out fixed min-h-24 z-[10000] top-0 left-0 w-screen text-white py-4" +
         (isOpen ? " h-80 overflow-hidden" : " h-24")
       }
     >

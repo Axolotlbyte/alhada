@@ -6,7 +6,7 @@ import "react-multi-carousel/lib/styles.css"; // Ensure you have this import for
 
 const Card = ({ num }) => {
   return (
-    <div className="w-full h-fit p-2 flex flex-col gap-2 bg-black text-white backdrop-blur-lg rounded-sm">
+    <div className="w-full hover:scale-105 transition-all duration-150 h-fit p-2 flex flex-col gap-2 bg-black text-white backdrop-blur-lg rounded-sm">
       <div>
         <Image
           src={"/images/bowling.png"}
