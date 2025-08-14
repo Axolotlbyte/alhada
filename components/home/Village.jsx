@@ -6,7 +6,7 @@ const CardWithCircle = ({ imageSrc, title, reverse, lId, elongated }) => {
     <div
       id={lId}
       className={
-        "flex flex-col md:flex-row h-auto py-8 gap-4 items-center justify-center overflow-hidden" +
+        "flex flex-col md:flex-row h-auto text-black py-8 gap-4 items-center justify-center overflow-hidden" +
         (reverse ? " md:flex-row-reverse" : "")
       }
     >
@@ -22,10 +22,10 @@ const CardWithCircle = ({ imageSrc, title, reverse, lId, elongated }) => {
         </div>
       </div>
 
-      <div className="w-full h-full flex text-center px-4 justify-center items-center">
+      <div className="w-full h-full flex text-black text-center px-4 justify-center items-center">
         <div className="flex flex-col items-center justify-center gap-4">
-          <h2 className="text-2xl font-bold">Luxurious Pools</h2>
-          <p className="w-4/5 text-center">
+          <h2 className="text-2xl font-bold text-black">Luxurious Pools</h2>
+          <p className="w-4/5 text-center text-black">
             Step into calm and comfort with our beautifully designed pools.
             Surrounded by greenery and soft lighting, each space invites you to
             unwind in style.
@@ -44,11 +44,11 @@ const Wellness = ({ lId }) => {
   return (
     <section
       id={lId}
-      className="w-full flex flex-col bg-lime-100 py-8 items-center justify-center text-center"
+      className="w-full flex flex-col text-black bg-lime-100 py-8 items-center justify-center text-center"
     >
       <div className="flex flex-col gap-4">
-        <h2 className="text-4xl font-bold">Wellness Retreat</h2>
-        <p>
+        <h2 className="text-4xl font-bold text-black">Wellness Retreat</h2>
+        <p className="text-black">
           Find your balance with calming spaces designed to restore body and
           mind.
         </p>
@@ -97,7 +97,7 @@ const Wellness = ({ lId }) => {
 
 const Village = () => {
   return (
-    <section className="w-full flex flex-col items-center py-8">
+    <section className="w-full text-black flex flex-col items-center py-8">
       <Break />
       <div className="w-full text-center py-16">
         <div className="w-11/12 max-w-3xl mx-auto text-center">
