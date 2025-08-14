@@ -107,10 +107,10 @@ const Contact = () => {
         <div className="w-full">
           <textarea
             placeholder="What else can we help you with ?"
-            className="w-full h-24 bg-black/50 text-white py-2 px-3 outline-none"
+            className="w-full max-h-32 h-32 min-h-32 bg-black/50 text-white py-2 px-3 outline-none"
           ></textarea>
         </div>
-        <button className="bg-primary hover:scale-105 transition-all active:scale-100 w-fit text-white font-bold py-3 px-4">
+        <button className="bg-[#7E975D] hover:scale-105 transition-all active:scale-100 w-fit text-white font-bold py-3 px-4">
           Get In Touch
         </button>
       </div>

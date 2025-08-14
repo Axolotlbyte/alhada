@@ -9,6 +9,7 @@ import Pools from "@/components/home/Pools";
 import Dining from "@/components/home/Dining";
 import Gym from "@/components/home/Gym";
 import Header from "@/components/Header";
+import Housing from "@/components/home/Housing";
 // import Image from "next/image";
 
 export default function Home() {
@@ -38,11 +39,13 @@ export default function Home() {
       <main className="flex w-full flex-col row-start-2 items-center sm:items-start">
         <Hero />
         <Welcome />
-        <Pools />
+        <Housing />
+        {/* <Pools />
         <Gym />
         <Dining />
-        <Games />
-        <Services />
+        <Games /> 
+        <Services /> */}
+        
         <Contact />
 
         {scrollY > 800 ? (

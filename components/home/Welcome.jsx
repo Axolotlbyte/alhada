@@ -2,8 +2,17 @@
 import Image from "next/image";
 const Welcome = () => {
   return (
-    <section className="w-full">
-      <div className="w-11/12 flex text-center flex-col py-8 md:py-16 gap-6 md:gap-8 mx-auto">
+    <section className="w-full relative">
+      {/* <div>
+        <Image
+          src="/images/test.png"
+          alt="Welcome Image"
+          width={4000}
+          height={4000}
+          className="w-full h-14 object-cover"
+        />
+      </div> */}
+      <div className="w-11/12 z-10 flex text-center flex-col py-8 md:py-16 gap-6 md:gap-8 mx-auto">
         <h1 className="w-full text-blue-900 drop-shadow-xl text-stroke py-6 md:py-8 font-bold text-3xl md:text-5xl">
           WELCOME TO WADI AL HADA RESORT
         </h1>
@@ -15,27 +24,37 @@ const Welcome = () => {
           valley retreat.
         </p>
       </div>
-      <div className="w-full flex flex-col md:flex-row relative gap-4 md:gap-0 items-center md:items-stretch">
+      <div className="absolute inset-0 w-full opacity-15 top-0 -z-0 h-96 md:h-[600px]">
+        <Image
+          src="/logo.svg"
+          alt="Welcome Image"
+          width={4000}
+          height={4000}
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      <div className="w-full flex flex-col md:flex-row relative md:gap-0 items-center md:items-stretch">
         <Image
           src="/images/room.png"
           alt="Welcome Image"
           width={800}
           height={600}
-          className="w-10/12 md:w-1/3 aspect-square object-cover mx-auto md:mx-0"
+          className="w-full md:w-1/3 aspect-square object-cover mx-auto md:mx-0"
         />
         <Image
           src="/images/pool.png"
           alt="Welcome Image"
           width={800}
           height={600}
-          className="w-10/12 md:w-1/3 aspect-square object-cover object-top mx-auto md:mx-0"
+          className="w-full md:w-1/3 aspect-square object-cover object-top mx-auto md:mx-0"
         />
         <Image
           src="/images/gym.png"
           alt="Welcome Image"
           width={800}
           height={600}
-          className="w-10/12 md:w-1/3 aspect-square object-cover object-top mx-auto md:mx-0"
+          className="w-full md:w-1/3 aspect-square object-cover object-top mx-auto md:mx-0"
         />
       </div>
       <div className="w-11/12 mx-auto py-8 text-black md:py-10 flex flex-col gap-8 md:gap-12 items-center justify-center text-center">
@@ -43,7 +62,7 @@ const Welcome = () => {
           Location that Speaks for itself
         </h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0">
-          <div className="w-full md:w-1/2 p-3 rounded-sm border aspect-[2/1] overflow-clip flex justify-center items-center">
+          <div className="w-full md:w-1/2 p-3 rounded-sm border aspect-[2/1] overflow-clip flex justify-center items-left">
             <Image
               src="/images/droneview.png"
               alt="Welcome Image"
@@ -52,15 +71,15 @@ const Welcome = () => {
               className="w-full border rounded-sm object-cover"
             />
           </div>
-          <div className="w-full md:w-1/3 text-black px-2 mt-4 md:mt-0">
-            <p className="text-lg md:text-2xl text-black leading-relaxed font-bold text-left md:text-center">
+          <div className="w-full md:w-1/4 text-black px-2 mt-4 md:mt-0">
+            <p className="text-lg md:text-2xl text-black leading-relaxed font-bold text-left md:text-left">
               In the calm of the wadi, far from the noise — yet close to
               everything that matters.
             </p>
           </div>
         </div>
       </div>
-      <div className="w-full">
+      {/* <div className="w-full">
         <Image
           src="/images/welcome/welcome.png"
           alt="Welcome Image"
@@ -68,7 +87,7 @@ const Welcome = () => {
           height={700}
           className="w-full h-auto object-cover"
         />
-      </div>
+      </div> */}
       <style jsx>{`
         .text-stroke {
           -webkit-text-stroke: 1px black;

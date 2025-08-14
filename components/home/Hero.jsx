@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Nav = ({ img, title, lId }) => {
+const Nav = ({ img, title, lId, size }) => {
   // const scrollToSection = (id) => {
   //   const element = document.getElementById(id);
   //   element?.scrollIntoView({ behavior: "smooth" });
@@ -25,7 +25,7 @@ const Nav = ({ img, title, lId }) => {
         alt="Logo"
         width={240}
         height={240}
-        className="w-14 h-14 object-cover invert"
+        className={"object-cover invert" + (size ? ` h-${size} w-${size}` : " w-14 h-14")}
       />
       {title}
     </button>
@@ -37,10 +37,10 @@ const Hero = () => {
     <section
       id={"hero"}
       style={{ backgroundImage: "url('/Hero.png')" }}
-      className="flex items-center gap-6 bg-center bg-no-repeat justify-end md:justify-normal w-full h-fit py-14 pt-30 flex-col relative"
+      className="flex items-center gap-6 bg-center bg-cover bg-no-repeat justify-end md:justify-normal w-full h-fit py-14 pt-30 flex-col relative"
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50 z-0 pointer-events-none" />
+      <div className="absolute inset-0 z-0 pointer-events-none" />
 
       <div className="w-11/12 flex flex-col">
         <div className="w-full md:w-1/2 lg:w-1/2 xl:w-1/3 h-fit flex flex-col gap-5 p-5 rounded-sm backdrop-blur-sm bg-black/65">
@@ -57,7 +57,7 @@ const Hero = () => {
           </span>
           <div className="flex w-full h-fit gap-3 ">
             <Link href="/explore">
-              <button className="bg-primary text-white text-bold px-6 py-3 hover:scale-105 transition-all duration-300">
+              <button className="bg-[#7E975D] text-white text-bold px-6 py-3 hover:scale-105 transition-all duration-300">
                 Explore
               </button>
             </Link>
@@ -66,12 +66,27 @@ const Hero = () => {
         </div>
         {/* Navbar bottom */}
       </div>
-      <div className="w-11/12 rounded-sm hidden md:flex  bg-black/65 p-4 bottom-5 backdrop-blur-xs">
+      <div className="w-11/12 rounded-sm hidden md:flex  bg-black/65 py-4 bottom-5 backdrop-blur-xs">
         <Nav img={"/icons/pool.png"} lId={"pools"} title={"Pools"} />
         <Nav img={"/icons/dumbbell.png"} lId={"gyms"} title={"Gyms"} />
-        <Nav img={"/icons/dining.png"} lId={"dining"} title={"Dining"} />
-        <Nav img={"/icons/games.png"} lId={"games"} title={"Games"} />
-        <Nav img={"/icons/services.png"} lId={"services"} title={"Services"} />
+        <Nav
+          img={"/icons/dining.png"}
+          size={"12"}
+          lId={"dining"}
+          title={"Dining"}
+        />
+        <Nav
+          img={"/icons/games.png"}
+          size={"12"}
+          lId={"games"}
+          title={"Games"}
+        />
+        <Nav
+          img={"/icons/services.png"}
+          size={"12"}
+          lId={"services"}
+          title={"Services"}
+        />
       </div>
     </section>
   );

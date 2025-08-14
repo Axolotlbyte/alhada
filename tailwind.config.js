@@ -7,9 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#D4AA00", // Replace with your color
+        primary: "#7E975D",
       },
     },
   },
-  // ...existing config...
 };

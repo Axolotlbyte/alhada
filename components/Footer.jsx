@@ -2,21 +2,21 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="w-full border-y-6 text-black bg-white border-[#D4AA00] my-6 font-[family-name:var(--font-outfit)] h-fit flex ">
+    <footer className="w-full border-y-8 text-black bg-white border-[#7E975D] my-6 font-[family-name:var(--font-outfit)] h-fit flex ">
       {/* <div className="w-full p-1 my-6 bg-[#D4AA00]"></div> */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div className="flex flex-col gap-3 text-center p-6 items-center justify-center w-full ">
           <Image
-            src="/logo.svg"
+            src="/footerLogo.svg"
             alt="Wadi al Hada Logo"
-            width={90}
-            height={90}
-            className="inline-block"
+            width={200}
+            height={200}
+            className="inline-block w-2/3 bg-cover h-auto"
           />
-          <div className="text-2xl flex flex-col text-center font-bold">
+          {/* <div className="text-2xl flex flex-col text-center font-bold">
             <p>Wadi al Hada</p>
             <span className="text-xl">Resort</span>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex flex-col gap-3 text-left p-6 items-start justify-between w-full h-full">

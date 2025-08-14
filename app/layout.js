@@ -4,6 +4,52 @@ import { Outfit } from "next/font/google";
 import Footer from "@/components/Footer";
 import "./globals.css";
 import Header from "@/components/Header";
+import localFont from "next/font/local";
+
+const avenir = localFont({
+  src: [
+    {
+      path: "../public/fonts/AvenirLTProBlack.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/AvenirLTProBlackOblique.otf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/AvenirLTProHeavy.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/AvenirLTProHeavyOblique.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+});
+
+const gravesend = localFont({
+  src: [
+    {
+      path: "../public/fonts/gravesend/Gravesend_Sans_Medium.otf",
+      weight: "400",
+      style: "light",
+    },
+    {
+      path: "../public/fonts/gravesend/Gravesend_Sans_Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/gravesend/Gravesend_Sans_Bold.otf",
+      weight: "700",
+      style: "bold",
+    },
+  ],
+});
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -19,7 +65,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${outfit.variable} antialiased bg-white text-black w-full`}
+        className={`${outfit.className} antialiased bg-white text-black w-full`}
       >
         {/* <Header /> */}
         {children}
