@@ -1,17 +1,17 @@
 import Break from "../Break";
 import Image from "next/image";
 
-const CardWithCircle = ({ imageSrc, title, reverse, lId }) => {
+const CardWithCircle = ({ imageSrc, title, reverse, lId, elongated }) => {
   return (
     <div
       id={lId}
       className={
-        "flex flex-col md:flex-row h-auto py-8 items-center justify-center overflow-hidden" +
+        "flex flex-col md:flex-row h-auto py-8 gap-4 items-center justify-center overflow-hidden" +
         (reverse ? " md:flex-row-reverse" : "")
       }
     >
       <div className="w-full flex items-center justify-center">
-        <div className="w-2/3 aspect-square bg-red-300 rounded-full">
+        <div className="w-2/3 flex items-center justify-center aspect-[1/1.5] bg-red-300 rounded-full">
           <Image
             src={imageSrc ? imageSrc : ""}
             alt="Circle Image"
@@ -46,18 +46,50 @@ const Wellness = ({ lId }) => {
       id={lId}
       className="w-full flex flex-col bg-lime-100 py-8 items-center justify-center text-center"
     >
-      <div className="">
-        <h2>Wellness Retreat</h2>
+      <div className="flex flex-col gap-4">
+        <h2 className="text-4xl font-bold">Wellness Retreat</h2>
         <p>
           Find your balance with calming spaces designed to restore body and
           mind.
         </p>
       </div>
       <div className="w-full grid gap-4 py-4 pt-8 px-4 grid-cols-4">
-        <div className="w-full aspect-square bg-white"></div>
-        <div className="w-full aspect-square bg-white"></div>
-        <div className="w-full aspect-square bg-white"></div>
-        <div className="w-full aspect-square bg-white"></div>
+        <div className="w-full h-auto bg-white">
+          <Image
+            src={"/images/wellness/gym.png"}
+            alt="Gym Image"
+            width={800}
+            height={600}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="w-full h-auto flex items-center justify-center bg-white">
+          <Image
+            src={"/images/wellness/sauna.png"}
+            alt="Gym Image"
+            width={800}
+            height={600}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="w-full h-auto bg-white">
+          <Image
+            src={"/images/wellness/spa.png"}
+            alt="Gym Image"
+            width={800}
+            height={600}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="w-full h-auto bg-white">
+          <Image
+            src={"/images/wellness/yoga.png"}
+            alt="Gym Image"
+            width={800}
+            height={600}
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
     </section>
   );
