@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Break from "../Break";
 
 const ServiceCard = ({ reverse, img, title, desc }) => {
   return (
@@ -55,7 +56,8 @@ const data = [
 
 const Services = () => {
   return (
-    <section id={"services"} className="py-13">
+    <section id={"services"} className="py-13 flex flex-col gap-4">
+      <Break />
       <div className="w-11/12 flex flex-col gap-12 mx-auto text-left">
         <h1 className="text-5xl pb-8 font-bold text-black text-center">
           On-site services

@@ -10,6 +10,7 @@ import Dining from "@/components/home/Dining";
 import Gym from "@/components/home/Gym";
 import Header from "@/components/Header";
 import Housing from "@/components/home/Housing";
+import Village from "@/components/home/Village";
 // import Image from "next/image";
 
 export default function Home() {
@@ -45,7 +46,9 @@ export default function Home() {
         <Dining />
         <Games /> 
         <Services /> */}
-        
+
+        <Village />
+        <Services />
         <Contact />
 
         {scrollY > 800 ? (

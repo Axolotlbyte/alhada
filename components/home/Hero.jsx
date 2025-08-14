@@ -42,7 +42,7 @@ const Hero = () => {
       {/* Overlay */}
       <div className="absolute inset-0 z-0 pointer-events-none" />
 
-      <div className="w-11/12 flex flex-col">
+      <div className="w-11/12 opacity-0 md:opacity-100 flex flex-col">
         <div className="w-full md:w-1/2 lg:w-1/2 xl:w-1/3 h-fit flex flex-col gap-5 p-5 rounded-sm backdrop-blur-sm bg-black/65">
           <h1 className="text-2xl md:text-4xl leading-normal text-white font-bold ">
             LIVE FULLY.

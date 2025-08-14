@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Break from "../Break";
 
 const Card = ({ imageSrc, title }) => {
   return (
@@ -33,18 +34,21 @@ const Card = ({ imageSrc, title }) => {
 const Housing = () => {
   return (
     <div className="w-full">
-      <div className="w-full flex gap-4 items-center justify-center">
-        <hr className="w-full border-[#7E975D] border" />
-        <Image
-          src="/icons/logoW.svg"
-          alt=""
-          width={1400}
-          height={700}
-          className="w-12 h-auto object-cover"
-        />
-        <hr className="w-full border-[#7E975D] border" />
+      <Break />
+
+      {/* title */}
+      <div className="w-full text-center py-8">
+        <div className="w-11/12 max-w-3xl mx-auto text-center">
+          <h1 className="text-3xl md:text-5xl font-bold text-black mb-4">
+            Wadi Al Hada Residences
+          </h1>
+          <p className="text-lg md:text-xl text-gray-800">
+            A refined sanctuary where modern luxury meets timeless comfort
+          </p>
+        </div>
       </div>
-      <div className="grid-cols-1 md:grid-cols-3 w-11/12 mx-auto grid gap-4 md:gap-6 py-8 md:py-12">
+
+      <div className="grid-cols-1 md:grid-cols-3 w-11/12 mx-auto grid gap-4 md:gap-6 pb-8 md:py-4">
         {/* <div>
           <div className="w-full">
             <Image
