@@ -1,10 +1,18 @@
 "use client";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer, Marker, Popup, ImageOverlay } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  ImageOverlay,
+} from "react-leaflet";
 
 const imageUrl = "/images/map/map.jpg"; // Replace with your image path
-const imageBounds = [[0, 0], [9150, 11275]]; // [height, width]
-
+const imageBounds = [
+  [0, 0],
+  [9150, 11275],
+]; // [height, width]
 
 export default function MapComponent() {
   return (
@@ -16,8 +24,8 @@ export default function MapComponent() {
       minZoom={-80}
       zoom={0}
       scrollWheelZoom={true}
-      touchZoom={true} 
-      doubleClickZoom={true} 
+      touchZoom={true}
+      doubleClickZoom={true}
       dragging={true}
     >
       <ImageOverlay url={imageUrl} bounds={imageBounds} />

@@ -10,7 +10,7 @@ import MapWrapper from "@/components/map/MapWrapper";
 
 export default function Map() {
   return (
-    <div>
+    <div className="w-full h-screen">
       <MapWrapper />
     </div>
   );
