@@ -101,7 +101,7 @@ const Village = () => {
       <Break />
       <div className="w-full text-center py-16">
         <div className="w-11/12 max-w-3xl mx-auto text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-black mb-4">
+          <h1 className="text-xl md:text-3xl font-bold text-black mb-4">
             The Village Amenities
           </h1>
           <p className="text-lg md:text-xl text-gray-800">

@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${outfit.className} antialiased bg-white text-black w-full`}
+        className={`${avenir.className} antialiased bg-white text-black w-full`}
       >
         {/* <Header /> */}
         {children}

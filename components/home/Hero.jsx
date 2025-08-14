@@ -25,7 +25,11 @@ const Nav = ({ img, title, lId, size }) => {
         alt="Logo"
         width={240}
         height={240}
-        className={"object-cover invert" + (size ? ` h-${size} w-${size}` : " w-14 h-14")}
+        className={
+          "object-cover invert h-9 w-9" 
+          // + 
+          // (size ? ` h-${9} w-${9}` : " w-14 h-14")
+        }
       />
       {title}
     </button>
@@ -67,23 +71,28 @@ const Hero = () => {
         {/* Navbar bottom */}
       </div>
       <div className="w-11/12 rounded-sm hidden md:flex  bg-black/65 py-4 bottom-5 backdrop-blur-xs">
-        <Nav img={"/icons/pool.png"} lId={"pools"} title={"Pools"} />
-        <Nav img={"/icons/dumbbell.png"} lId={"gyms"} title={"Gyms"} />
+        <Nav img={"/icons/pool.png"} size={"6"} lId={"pools"} title={"Pools"} />
+        <Nav
+          img={"/icons/dumbbell.png"}
+          size={"6"}
+          lId={"gyms"}
+          title={"Gyms"}
+        />
         <Nav
           img={"/icons/dining.png"}
-          size={"12"}
+          size={"6"}
           lId={"dining"}
           title={"Dining"}
         />
         <Nav
           img={"/icons/games.png"}
-          size={"12"}
+          size={"6"}
           lId={"games"}
           title={"Games"}
         />
         <Nav
           img={"/icons/services.png"}
-          size={"12"}
+          size={"6"}
           lId={"services"}
           title={"Services"}
         />

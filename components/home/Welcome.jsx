@@ -13,11 +13,11 @@ const Welcome = () => {
         />
       </div> */}
       <div className="w-11/12 z-10 flex text-center flex-col py-8 md:py-16 gap-6 md:gap-8 mx-auto">
-        <h1 className="w-full text-blue-900 drop-shadow-xl text-stroke py-6 md:py-8 font-bold text-3xl md:text-5xl">
+        <h1 className="w-full text-blue-900 drop-shadow-xl text-stroke py-6 md:py-8 font-bold text-xl md:text-3xl">
           WELCOME TO WADI AL HADA RESORT
         </h1>
 
-        <p className="text-lg md:text-2xl py-6 md:py-8 text-gray-700">
+        <p className=" text- md:text-lg py-6 md:py-8 text-gray-700">
           Wadi al hada isn’t just a resort — It’s a warm, International
           community. Whether you’re here short-term or long term, you’ll find
           neighbours, friends, and support in every corner of our peaceful
@@ -58,7 +58,7 @@ const Welcome = () => {
         />
       </div>
       <div className="w-11/12 mx-auto py-8 text-black md:py-10 flex flex-col gap-8 md:gap-12 items-center justify-center text-center">
-        <h2 className="text-3xl md:text-5xl text-black font-bold">
+        <h2 className="text-xl md:text-3xl text-black font-bold">
           Location that Speaks for itself
         </h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0">
@@ -72,7 +72,7 @@ const Welcome = () => {
             />
           </div>
           <div className="w-full md:w-1/4 text-black px-2 mt-4 md:mt-0">
-            <p className="text-lg md:text-2xl text-black leading-relaxed font-bold text-left md:text-left">
+            <p className="text-lg  text-black leading-relaxed font-bold text-left md:text-left">
               In the calm of the wadi, far from the noise — yet close to
               everything that matters.
             </p>
