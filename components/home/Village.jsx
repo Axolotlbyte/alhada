@@ -82,7 +82,11 @@ const Village = () => {
         <Wellness lId={"gyms"} />
         <CardWithCircle lId={"pools"} imageSrc={"/images/poolBig.png"} />
         <Wellness lId={"games"} />
-        <CardWithCircle imageSrc={"/images/restaurant.png"} reverse lId={"dining"} />
+        <CardWithCircle
+          imageSrc={"/images/restaurant.png"}
+          reverse
+          lId={"dining"}
+        />
       </div>
     </section>
   );
