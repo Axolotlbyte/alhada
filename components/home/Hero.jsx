@@ -41,7 +41,7 @@ const Hero = () => {
     <section
       id={"hero"}
       style={{ backgroundImage: "url('/Hero.png')" }}
-      className="flex items-center bg-fixed gap-6 bg-center bg-cover bg-no-repeat justify-end md:justify-normal w-full h-fit py-14 pt-30 flex-col relative"
+      className="flex items-center md:bg-fixed gap-6 bg-center bg-cover bg-no-repeat justify-end md:justify-normal w-full h-fit py-14 pt-30 flex-col relative"
     >
       {/* Overlay */}
       <div className="absolute inset-0 z-0 pointer-events-none" />
@@ -55,7 +55,7 @@ const Hero = () => {
             <br />
             LUXURIOUSLY.
           </h1>
-          <span className=" text-lg">
+          <span className="text-lg">
             At Wadi Al Hada Resort — A Private Valley Where Life Flows with
             Comfort and Calm
           </span>

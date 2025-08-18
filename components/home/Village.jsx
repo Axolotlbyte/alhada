@@ -51,7 +51,7 @@ const Wellness = ({ lId, title, desc }) => {
           {desc ? desc : ""}
         </p>
       </div>
-      <div className="w-full grid gap-4 py-4 pt-8 px-4 grid-cols-4">
+      <div className="w-full grid gap-4 py-4 pt-8 px-4 grid-cols-2 md:grid-cols-4">
         <div className="w-full h-auto bg-white">
           <Image
             src={"/images/wellness/gym.png"}
