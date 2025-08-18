@@ -76,7 +76,7 @@ const Hero = () => {
           img={"/icons/dumbbell.png"}
           size={"6"}
           lId={"gyms"}
-          title={"Gyms"}
+          title={"Fitness"}
         />
         <Nav
           img={"/icons/dining.png"}
