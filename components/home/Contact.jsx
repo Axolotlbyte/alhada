@@ -18,7 +18,7 @@ const Contact = () => {
       style={{ backgroundImage: `url(${contactImg.src})` }}
       className="w-full bg-cover h-screen flex items-center justify-center"
     >
-      <div className="flex flex-col p-4 gap-8 items-center justify-center bg-white/70 rounded-sm bg-opacity-60 text-center h-fit w-11/12 md:w-1/2 bg-opacity-20">
+      <div className="flex flex-col p-4 gap-8 items-center justify-center bg-white/70 backdrop-blur-xl rounded-sm bg-opacity-60 text-center h-fit w-11/12 md:w-1/2 bg-opacity-20">
         <h2 className=" text-white font-bold">Contact Us</h2>
         <div className="flex w-full gap-4">
           <Input
@@ -110,7 +110,7 @@ const Contact = () => {
             className="w-full max-h-32 h-32 min-h-32 bg-white/50 placeholder:text-[#354826]/50 text-[#354826] py-2 px-3 outline-none"
           ></textarea>
         </div>
-        <button className="bg-[#354826] hover:scale-105 transition-all active:scale-100 w-fit text-white font-bold py-3 px-4">
+        <button className="bg-[#354826] hover:scale-105 transition-all active:scale-100 w-fit text-white py-3 px-4">
           Get In Touch
         </button>
       </div>

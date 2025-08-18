@@ -1,3 +1,5 @@
+import Break from "../Break";
+
 const units = [
   {
     img: "/images/units/room.png",
@@ -30,6 +32,7 @@ const Units = () => {
   return (
     <section className="w-full h-fit py-10">
       <div className="w-11/12 mx-auto">
+        <Break />
         <h2 className="text-2xl md:text-4xl py-4 font-bold text-black mb-8">
           Browse Units
         </h2>
@@ -45,10 +48,8 @@ const Units = () => {
                 className="w-full h-48 object-cover"
               />
               <div className="p-4 flex flex-col flex-1">
-                <h3 className="text-xl font-bold mb-2 text-black">
-                  {unit.title}
-                </h3>
-                <p className="text-gray-700 text-sm">{unit.desc}</p>
+                <h5 className="text-xl font-bold mb-2">{unit.title}</h5>
+                <p className=" text-sm">{unit.desc}</p>
               </div>
             </div>
           ))}

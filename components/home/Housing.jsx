@@ -22,7 +22,7 @@ const Card = ({ imageSrc, title }) => {
       </div>
 
       <div className="w-full flex justify-baseline">
-        <button className="bg-[#7E975D] text-white font-normal text-sm px-6 py-2 hover:scale-105 transition-all duration-300">
+        <button className="bg-[#354826] text-white font-normal text-sm px-6 py-2 hover:scale-105 transition-all duration-300">
           {" "}
           Learn More
         </button>
