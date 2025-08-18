@@ -14,7 +14,7 @@ const Card = ({ imageSrc, title }) => {
         />
       </div>
       <div className="text-left flex flex-col gap-6 py-4">
-        <h2 className="text-xl">{title}</h2>
+        <h4 className="text-xl">{title}</h4>
         <p className="">
           A private, spacious home with elegant architecture, lush gardens, and
           premium amenities—perfect for luxurious family living and entertaining
@@ -38,10 +38,8 @@ const Housing = () => {
 
       {/* title */}
       <div className="w-full text-center py-8">
-        <div className="w-11/12 max-w-3xl mx-auto text-center">
-          <h1 className="text-xl md:text-3xl font-bold text-black mb-4">
-            Wadi Al Hada Residences
-          </h1>
+        <div className="w-11/12 mx-auto text-center">
+          <h2 className="font-bold text-black mb-4">Wadi Al Hada Residences</h2>
           <p className="text- text-[1rem] md:text-xl text-gray-800">
             A refined sanctuary where modern luxury meets timeless comfort
           </p>

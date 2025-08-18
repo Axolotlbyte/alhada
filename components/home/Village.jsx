@@ -24,7 +24,7 @@ const CardWithCircle = ({ imageSrc, title, reverse, lId, elongated }) => {
 
       <div className="w-full h-full flex text-black text-center px-4 justify-center items-center">
         <div className="flex flex-col items-center justify-center gap-4">
-          <h2 className="text-2xl font-bold text-black">Luxurious Pools</h2>
+          <h3 className="font-bold text-black">Luxurious Pools</h3>
           <p className="w-4/5 text-center text-black">
             Step into calm and comfort with our beautifully designed pools.
             Surrounded by greenery and soft lighting, each space invites you to
@@ -47,7 +47,7 @@ const Wellness = ({ lId }) => {
       className="w-full flex flex-col text-black bg-lime-100 py-8 items-center justify-center text-center"
     >
       <div className="flex flex-col gap-4">
-        <h2 className="text-4xl font-bold text-black">Wellness Retreat</h2>
+        <h3 className="font-bold text-black">Wellness Retreat</h3>
         <p className="text-black">
           Find your balance with calming spaces designed to restore body and
           mind.
@@ -101,10 +101,8 @@ const Village = () => {
       <Break />
       <div className="w-full text-center py-16">
         <div className="w-11/12 max-w-3xl mx-auto text-center">
-          <h1 className="text-xl md:text-3xl font-bold text-black mb-4">
-            The Village Amenities
-          </h1>
-          <p className="text-lg md:text-xl text-gray-800">
+          <h2 className="font-bold text-black mb-4">The Village Amenities</h2>
+          <p className=" text-gray-800">
             A refined sanctuary where modern luxury meets timeless comfort
           </p>
         </div>

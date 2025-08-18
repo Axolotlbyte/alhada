@@ -1,3 +1,8 @@
+const { default: Header } = require("@/components/Header");
+
 const about = () => {
-  return <div></div>;
+  return <div>
+    <Header />
+    <div className="h-screen w-full"></div>
+  </div>;
 };

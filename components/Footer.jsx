@@ -5,6 +5,7 @@ const Footer = () => {
     <footer className="w-full border-y-8 text-black bg-white border-[#7E975D] my-6 font-[family-name:var(--font-outfit)] h-fit flex ">
       {/* <div className="w-full p-1 my-6 bg-[#D4AA00]"></div> */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        {/* Logo */}
         <div className="flex flex-col gap-3 text-center p-6 items-center justify-center w-full ">
           <Image
             src="/footerLogo.svg"
@@ -19,8 +20,9 @@ const Footer = () => {
           </div> */}
         </div>
 
+        {/* Location */}
         <div className="flex flex-col gap-3 text-left p-6 items-start justify-between w-full h-full">
-          <h3 className="text-xl font-bold">Location</h3>
+          <h5 className="font-bold">Location</h5>
           <div className="w-full flex gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -44,8 +46,10 @@ const Footer = () => {
             7604 Wadi Hanifah St, Hijratlaban, 3451, Riyadh 12761
           </div>
 
-          <h3 className="text-xl font-bold">Connect with us</h3>
+          {/* Connect */}
+          <h5 className="font-bold">Connect with us</h5>
           <div className="flex gap-4">
+            {/* facebook */}
             <svg
               width="16"
               height="16"
@@ -59,6 +63,7 @@ const Footer = () => {
               />
             </svg>
 
+            {/* whatsapp */}
             <svg
               width="16"
               height="16"
@@ -72,7 +77,8 @@ const Footer = () => {
               />
             </svg>
 
-            <svg
+            {/* twitter */}
+            {/* <svg
               width="16"
               height="16"
               viewBox="0 0 24 22"
@@ -80,11 +86,12 @@ const Footer = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M18.9 0.125H22.581L14.541 9.338L24 21.875H16.5945L10.794 14.27L4.1565 21.875H0.474L9.0735 12.02L0 0.125H7.5945L12.837 7.0745L18.9 0.125ZM17.61 19.667H19.65L6.4845 2.2175H4.2975L17.61 19.667Z"
+                d="M18.9 0.125H22.581L14.541 9.338L24 21.875H16.5945L10.794 14.27L4.1565 21.875H0.474L9.0735 12.02L0 0.125H7.5945L12.837 7.0745L18.9 0.125ZM17.61 19.667H19.65L6.4845 2.2175H5h5.2975L17.61 19.667Z"
                 fill="black"
               />
-            </svg>
+            </svg> */}
 
+            {/* instagram */}
             <svg
               width="16"
               height="16"
@@ -98,7 +105,8 @@ const Footer = () => {
               />
             </svg>
 
-            <svg
+            {/* telegram */}
+            {/* <svg
               width="16"
               height="16"
               viewBox="0 0 24 24"
@@ -109,12 +117,13 @@ const Footer = () => {
                 d="M24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76516 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76516 1.26428 8.8174 0 12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12ZM12.4305 8.859C11.2625 9.345 8.9295 10.35 5.4315 11.874C4.8645 12.099 4.567 12.32 4.539 12.537C4.494 12.9015 4.9515 13.0455 5.574 13.242L5.8365 13.3245C6.4485 13.524 7.2735 13.7565 7.701 13.7655C8.091 13.7755 8.525 13.6155 9.003 13.2855C12.272 11.0795 13.959 9.9645 14.064 9.9405C14.139 9.9225 14.244 9.9015 14.313 9.9645C14.382 10.0275 14.376 10.1445 14.3685 10.176C14.3235 10.3695 12.528 12.0375 11.5995 12.9015C11.31 13.1715 11.1045 13.362 11.0625 13.4055C10.97 13.5 10.876 13.5931 10.7805 13.6845C10.2105 14.2335 9.7845 14.6445 10.803 15.3165C11.2935 15.6405 11.6865 15.906 12.078 16.173C12.504 16.464 12.93 16.7535 13.482 17.1165C13.622 17.2085 13.757 17.302 13.887 17.397C14.3835 17.751 14.832 18.069 15.3825 18.018C15.7035 17.988 16.035 17.688 16.203 16.788C16.6005 14.6625 17.382 10.059 17.562 8.1615C17.5733 8.00377 17.5668 7.84526 17.5425 7.689C17.528 7.56301 17.467 7.44696 17.3715 7.3635C17.2348 7.26965 17.0723 7.22088 16.9065 7.224C16.4565 7.2315 15.762 7.473 12.4305 8.859Z"
                 fill="black"
               />
-            </svg>
+            </svg> */}
           </div>
         </div>
 
+        {/* Links */}
         <div className="flex flex-col p-6 items-start justify-center h-fit w-full gap-3">
-          <h3 className="text-xl font-bold">Quick Links</h3>
+          <h5 className="font-bold">Quick Links</h5>
           <div className="flex flex-col gap-3">
             <span className="underline cursor-pointer text-blue-600 ">
               About Us
@@ -131,8 +140,9 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* office hours */}
         <div className="flex flex-col p-6 h-fit w-full gap-3">
-          <h3 className="text-xl font-bold">Office Hours</h3>
+          <h5 className="font-bold">Office Hours</h5>
           <div className="flex flex-col gap-3 w-3/4">
             <span className="underline">
               Saturday to Thursday - 9:00 am to 5:00 pm

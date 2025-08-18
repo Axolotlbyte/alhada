@@ -19,8 +19,8 @@ const ServiceCard = ({ reverse, img, title, desc }) => {
         />
       </div>
       <div className="text-left text-black flex flex-col gap-4 w-full">
-        <h2 className="text-4xl text-black font-bold">{title ? title : ""}</h2>
-        <p className="text-lg text-black">{desc ? desc : ""}</p>
+        <h4 className="text-black font-bold">{title ? title : ""}</h4>
+        <p className="text-black">{desc ? desc : ""}</p>
       </div>
     </div>
   );
@@ -59,9 +59,9 @@ const Services = () => {
     <section id={"services"} className="py-13 flex flex-col gap-4">
       <Break />
       <div className="w-11/12 flex flex-col gap-12 mx-auto text-left">
-        <h1 className="text-5xl pb-8 font-bold text-black text-center">
+        <h2 className="pb-8 font-bold text-black text-center">
           On-site services
-        </h1>
+        </h2>
         {data.map(({ img, title, desc }, index) => (
           <ServiceCard
             reverse={index % 2 !== 0}

@@ -18,7 +18,7 @@ const Nav = ({ img, title, lId, size }) => {
   return (
     <button
       onClick={() => scroll2El()}
-      className="w-full hover:scale-105 transition-all duration-300 active:scale-100 p-4 flex flex-col items-center justify-center font-bold gap-2 text-lg text-white"
+      className="w-full hover:scale-105 transition-all duration-300 active:scale-100 p-4 flex flex-col items-center justify-center font-bold gap-2 text-lg text-[#354826]"
     >
       <Image
         src={img}
@@ -26,8 +26,8 @@ const Nav = ({ img, title, lId, size }) => {
         width={240}
         height={240}
         className={
-          "object-cover invert h-9 w-9" 
-          // + 
+          "object-cover h-9 w-9"
+          // +
           // (size ? ` h-${9} w-${9}` : " w-14 h-14")
         }
       />
@@ -47,30 +47,30 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 pointer-events-none" />
 
       <div className="w-11/12 opacity-0 md:opacity-100 flex flex-col">
-        <div className="w-full md:w-1/2 lg:w-1/2 xl:w-1/3 h-fit flex flex-col gap-5 p-5 rounded-sm backdrop-blur-sm bg-black/65">
-          <h1 className="text-2xl md:text-4xl leading-normal text-white font-bold ">
+        <div className="w-full md:w-1/2 lg:w-1/2 xl:w-1/3 h-fit flex flex-col gap-5 p-5 rounded-sm backdrop-blur-sm bg-white/70">
+          <h1 className="leading-normal text-white font-bold ">
             LIVE FULLY.
             <br />
             NATURALLY.
             <br />
             LUXURIOUSLY.
           </h1>
-          <span className="text-white text-lg">
+          <span className=" text-lg">
             At Wadi Al Hada Resort — A Private Valley Where Life Flows with
             Comfort and Calm
           </span>
           <div className="flex w-full h-fit gap-3 ">
             <Link href="/explore">
-              <button className="bg-[#7E975D] text-white text-bold px-6 py-3 hover:scale-105 transition-all duration-300">
+              <button className="bg-[#354826] text-white text-bold px-6 py-3 hover:scale-105 transition-all duration-300">
                 Explore
               </button>
             </Link>
-            <button className="text-white underline">Learn more</button>
+            <button className="text-[#354826] underline">Learn more</button>
           </div>
         </div>
         {/* Navbar bottom */}
       </div>
-      <div className="w-11/12 rounded-sm hidden md:flex  bg-black/65 py-4 bottom-5 backdrop-blur-xs">
+      <div className="w-11/12 rounded-sm hidden md:flex  bg-white/70 py-4 bottom-5 backdrop-blur-xs">
         <Nav img={"/icons/pool.png"} size={"6"} lId={"pools"} title={"Pools"} />
         <Nav
           img={"/icons/dumbbell.png"}

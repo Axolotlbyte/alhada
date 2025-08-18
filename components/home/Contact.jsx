@@ -2,12 +2,12 @@ import contactImg from "../../public/images/contact.png";
 
 const Input = ({ type, placeholder, icon }) => {
   return (
-    <div className="w-full flex items-center px-2 p-2 bg-black/50">
+    <div className="w-full flex items-center px-2 p-2 bg-white/50">
       <div className="w-4">{icon ? icon : null}</div>
       <input
         type={type}
         placeholder={placeholder}
-        className="w-full h-full bg-transparent text-white px-4 outline-none"
+        className="w-full h-full bg-transparent placeholder:text-[#354826]/50 px-4 outline-none"
       />
     </div>
   );
@@ -18,8 +18,8 @@ const Contact = () => {
       style={{ backgroundImage: `url(${contactImg.src})` }}
       className="w-full bg-cover h-screen flex items-center justify-center"
     >
-      <div className="flex flex-col p-4 gap-8 items-center justify-center bg-black/60 bg-opacity-60 text-center h-fit w-11/12 md:w-1/2 bg-opacity-20">
-        <h1 className="text-2xl text-white font-bold">Contact Us</h1>
+      <div className="flex flex-col p-4 gap-8 items-center justify-center bg-white/70 rounded-sm bg-opacity-60 text-center h-fit w-11/12 md:w-1/2 bg-opacity-20">
+        <h2 className=" text-white font-bold">Contact Us</h2>
         <div className="flex w-full gap-4">
           <Input
             type="text"
@@ -107,10 +107,10 @@ const Contact = () => {
         <div className="w-full">
           <textarea
             placeholder="What else can we help you with ?"
-            className="w-full max-h-32 h-32 min-h-32 bg-black/50 text-white py-2 px-3 outline-none"
+            className="w-full max-h-32 h-32 min-h-32 bg-white/50 placeholder:text-[#354826]/50 text-[#354826] py-2 px-3 outline-none"
           ></textarea>
         </div>
-        <button className="bg-[#7E975D] hover:scale-105 transition-all active:scale-100 w-fit text-white font-bold py-3 px-4">
+        <button className="bg-[#354826] hover:scale-105 transition-all active:scale-100 w-fit text-white font-bold py-3 px-4">
           Get In Touch
         </button>
       </div>

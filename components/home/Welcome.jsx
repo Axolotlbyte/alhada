@@ -13,18 +13,18 @@ const Welcome = () => {
         />
       </div> */}
       <div className="w-11/12 z-10 flex text-center flex-col py-8 md:py-16 gap-6 md:gap-8 mx-auto">
-        <h1 className="w-full text-blue-900 drop-shadow-xl text-stroke py-6 md:py-8 font-bold text-xl md:text-3xl">
+        <h1 className="w-full text-[#354826] py-6 md:py-8 font-bold ">
           WELCOME TO WADI AL HADA RESORT
         </h1>
 
-        <p className=" text- md:text-lg py-6 md:py-8 text-gray-700">
+        <p className="py-6 md:py-8 text-gray-700">
           Wadi al hada isn’t just a resort — It’s a warm, International
           community. Whether you’re here short-term or long term, you’ll find
           neighbours, friends, and support in every corner of our peaceful
           valley retreat.
         </p>
       </div>
-      <div className="absolute inset-0 w-full opacity-15 top-0 -z-0 h-96 md:h-[600px]">
+      <div className="absolute inset-0 w-full opacity-10 top-0 -z-0 h-96 md:h-[600px]">
         <Image
           src="/logo.svg"
           alt="Welcome Image"

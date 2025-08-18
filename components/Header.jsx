@@ -11,8 +11,8 @@ const Header = ({ home }) => {
         " transition-all duration-500 ease-in-out min-h-24 z-[10000] top-0 left-0 w-full py-4" +
         (isOpen ? " h-80 overflow-hidden" : " h-24") +
         (home
-          ? " bg-black/65 backdrop-blur-lg fixed text-white"
-          : " text-black border-b")
+          ? " bg-white backdrop-blur-lg fixed text-[#354826]"
+          : " text-[#354826] border-b")
       }
     >
       <div className="w-11/12 mx-auto flex">
@@ -24,9 +24,9 @@ const Header = ({ home }) => {
             height={90}
             className=" w-16 h-16 inline-block"
           />
-          <span className="text-2xl hidden md:block text-nowrap font-bold leading-relaxed ">
+          <h4 className="text-2xl select-none hidden md:block text-nowrap font-bold leading-relaxed ">
             WADI AL HADA RESORT
-          </span>
+          </h4>
         </div>
 
         <div className="w-full flex items-center justify-end md:hidden">
@@ -86,7 +86,7 @@ const Header = ({ home }) => {
               <li className="hover:scale-110 transition-transform duration-300">
                 <a
                   href="#contact"
-                  className="hover:text-black hover:bg-white border border-white p-2 px-4"
+                  className="hover:text-black hover:bg-white border border-black p-2 px-4"
                 >
                   Contact
                 </a>
@@ -98,16 +98,16 @@ const Header = ({ home }) => {
 
       {isOpen ? (
         <>
-          <div className="h-14 mt-2 flex items-center justify-center border-b w-full bg-black/50">
+          <div className="h-14 mt-2 flex items-center justify-center border-b w-full bg-white">
             About
           </div>
-          <div className="h-14 flex items-center justify-center w-full border-b bg-black/50">
+          <div className="h-14 flex items-center justify-center w-full border-b bg-white">
             Dining
           </div>
-          <div className="h-14 flex items-center justify-center w-full border-b bg-black/50">
+          <div className="h-14 flex items-center justify-center w-full border-b bg-white">
             Events
           </div>
-          <div className="h-14 flex items-center justify-center w-full border-b bg-black/50">
+          <div className="h-14 flex items-center justify-center w-full border-b bg-white">
             Contact
           </div>{" "}
         </>
