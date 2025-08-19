@@ -3,28 +3,28 @@ import Break from "../Break";
 const units = [
   {
     img: "/images/units/room.png",
+    title: "Villas",
+    desc: "Spacious multi-level homes with private gardens and modern amenities.",
+  },
+  {
+    img: "/images/units/room.png",
     title: "Townhouses",
     desc: "Spacious multi-level homes with private gardens and modern amenities.",
   },
   {
     img: "/images/units/room.png",
-    title: "4 Bedroom Apartment",
+    title: "Apartments",
     desc: "Luxury apartments with four bedrooms, perfect for large families.",
   },
   {
     img: "/images/units/room.png",
-    title: "3 Bedroom Apartment",
+    title: "Amenities",
     desc: "Comfortable three-bedroom units with open living spaces.",
   },
   {
     img: "/images/units/room.png",
-    title: "2 Bedroom Apartment",
+    title: "Pools",
     desc: "Ideal for small families or couples, featuring two bedrooms.",
-  },
-  {
-    img: "/images/units/room.png",
-    title: "1 Bedroom Apartment",
-    desc: "Cozy one-bedroom apartments for singles or couples.",
   },
 ];
 

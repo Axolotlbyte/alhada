@@ -31,6 +31,7 @@ const Welcome = () => {
           width={4000}
           height={4000}
           className="w-full h-full object-cover"
+          draggable="false"
         />
       </div>
 

@@ -71,7 +71,13 @@ const Hero = () => {
         {/* Navbar bottom */}
       </div>
       <div className="w-11/12 rounded-sm hidden md:flex  bg-white/70 py-4 bottom-5 backdrop-blur-xs">
-        <Nav img={"/icons/pool.png"} size={"6"} lId={"pools"} title={"Pools"} />
+        <Nav
+          img={"/icons/pool.png"}
+          size={"6"}
+          lId={"pools"}
+          title={"Pools"}
+          // just to make it look better
+        />
         <Nav
           img={"/icons/dumbbell.png"}
           size={"6"}

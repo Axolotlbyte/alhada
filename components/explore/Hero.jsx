@@ -14,22 +14,22 @@ const Hero = () => {
         />
 
         {/* Village */}
-        <button className="p-2 hover:scale-105 transition-all active:scale-100 absolute top-[40%] left-[32%] bg-[#c1a467] border aspect-square h-10 font-bold text-white border-white rounded-full">
+        <button className="p-2 text-sm md:text-lg hover:scale-105 transition-all active:scale-100 absolute top-[40%] left-[32%] bg-[#c1a467] border aspect-square h-8 flex items-center justify-center md:h-10 font-bold text-white border-white rounded-full">
           1
         </button>
 
         {/* Apartments */}
-        <button className="p-2 hover:scale-105 transition-all active:scale-100 absolute top-[30%] left-[52%] bg-[#c1a467] border aspect-square h-10 font-bold text-white border-white rounded-full">
+        <button className="p-2 text-sm md:text-lg hover:scale-105 transition-all active:scale-100 absolute top-[30%] left-[52%] bg-[#c1a467] border aspect-square h-8 flex items-center justify-center md:h-10 font-bold text-white border-white rounded-full">
           2
         </button>
 
         {/* Townhouses */}
-        <button className="p-2 hover:scale-105 transition-all active:scale-100 absolute top-[30%] left-[14%] bg-[#c1a467] border aspect-square h-10 font-bold text-white border-white rounded-full">
+        <button className="p-2 text-sm md:text-lg hover:scale-105 transition-all active:scale-100 absolute top-[30%] left-[14%] bg-[#c1a467] border aspect-square h-8 flex items-center justify-center md:h-10 font-bold text-white border-white rounded-full">
           3
         </button>
 
         {/* Pools */}
-        <button className="p-2 hover:scale-105 transition-all active:scale-100 absolute top-[65%] left-[35%] bg-[#c1a467] border aspect-square h-10 font-bold text-white border-white rounded-full">
+        <button className="p-2 text-sm md:text-lg hover:scale-105 transition-all active:scale-100 absolute top-[65%] left-[35%] bg-[#c1a467] border aspect-square h-8 flex items-center justify-center md:h-10 font-bold text-white border-white rounded-full">
           4
         </button>
       </div>

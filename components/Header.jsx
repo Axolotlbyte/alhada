@@ -1,9 +1,17 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const Header = ({ home }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const scroll2El = (id) => {
+    window.scrollTo({
+      top: document.getElementById(`${id}`).offsetTop - (home ? 94 : 0),
+      behavior: "smooth",
+    });
+  };
 
   return (
     <header
@@ -16,18 +24,20 @@ const Header = ({ home }) => {
       }
     >
       <div className="w-11/12 mx-auto flex">
-        <div className="flex gap-4 items-center">
-          <Image
-            src="/logo.svg"
-            alt="Wadi al Hada Logo"
-            width={90}
-            height={90}
-            className=" w-16 h-16 inline-block"
-          />
-          <h4 className="text-2xl select-none hidden md:block text-nowrap font-bold leading-relaxed ">
-            WADI AL HADA RESORT
-          </h4>
-        </div>
+        <Link href={"/"}>
+          <div className="flex gap-4 items-center">
+            <Image
+              src="/logo.svg"
+              alt="Wadi al Hada Logo"
+              width={90}
+              height={90}
+              className=" w-16 h-16 inline-block"
+            />
+            <h4 className="text-2xl select-none hidden md:block text-nowrap font-bold leading-relaxed ">
+              WADI AL HADA RESORT
+            </h4>
+          </div>
+        </Link>
 
         <div className="w-full flex items-center justify-end md:hidden">
           <button className="p-2" onClick={() => setIsOpen(!isOpen)}>
@@ -67,11 +77,9 @@ const Header = ({ home }) => {
 
         <div className="w-full hidden md:block">
           <nav className="flex justify-end mt-4">
-            <ul className="flex gap-8 text-sm">
+            <ul className="flex items-center gap-8 text-sm">
               <li className="hover:scale-110 transition-transform duration-300">
-                <a href="#home" className="">
-                  About
-                </a>
+                <Link href={"/about"}>About</Link>
               </li>
               <li className="hover:scale-110 transition-transform duration-300">
                 <a href="#services" className="">
@@ -83,13 +91,13 @@ const Header = ({ home }) => {
                   Events
                 </a>
               </li>
-              <li className="hover:scale-110 transition-transform duration-300">
-                <a
-                  href="#contact"
-                  className="hover:text-black hover:bg-white border border-black p-2 px-4"
-                >
+              <li
+                onClick={() => scroll2El("contact")}
+                className="hover:scale-110 transition-transform duration-300"
+              >
+                <button className="hover:text-black hover:bg-white border border-black p-2 px-4">
                   Contact
-                </a>
+                </button>
               </li>
             </ul>
           </nav>
@@ -98,9 +106,11 @@ const Header = ({ home }) => {
 
       {isOpen ? (
         <>
-          <div className="h-14 mt-2 flex items-center justify-center border-b w-full bg-white">
-            About
-          </div>
+          <Link href={"/about"}>
+            <div className="h-14 mt-2 flex items-center justify-center border-b w-full bg-white">
+              About
+            </div>
+          </Link>
           <div className="h-14 flex items-center justify-center w-full border-b bg-white">
             Dining
           </div>

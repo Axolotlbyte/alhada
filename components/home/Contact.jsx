@@ -15,6 +15,7 @@ const Input = ({ type, placeholder, icon }) => {
 const Contact = () => {
   return (
     <section
+      id="contact"
       style={{ backgroundImage: `url(${contactImg.src})` }}
       className="w-full bg-cover h-screen flex items-center justify-center"
     >
