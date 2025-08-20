@@ -1,4 +1,4 @@
-import Break from "../Break";
+import Break from "../Break.jsx";
 import Image from "next/image";
 
 const CardWithCircle = ({ imageSrc, title, reverse, lId, desc, elongated }) => {
@@ -96,7 +96,9 @@ const Wellness = ({ lId, title, desc }) => {
 const Village = () => {
   return (
     <section className="w-full text-black flex flex-col items-center py-8">
-      <Break />
+      <div className="w-11/12 mx-auto">
+        <Break />
+      </div>
       <div className="w-full text-center py-16">
         <div className="w-11/12 max-w-3xl mx-auto text-center">
           <h2 className="font-bold text-black mb-4">The Village Amenities</h2>

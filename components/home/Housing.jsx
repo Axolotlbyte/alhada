@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Break from "../Break";
+import Break from "../Break.jsx";
 
 const Card = ({ imageSrc, title }) => {
   return (
@@ -34,7 +34,9 @@ const Card = ({ imageSrc, title }) => {
 const Housing = () => {
   return (
     <div className="w-full">
-      <Break />
+      <div className="w-11/12 mx-auto">
+        <Break />
+      </div>
 
       {/* title */}
       <div className="w-full text-center py-8">

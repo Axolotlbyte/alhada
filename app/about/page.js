@@ -1,11 +1,12 @@
-import Break from "@/components/Break";
+import Break from "@/components/Break.jsx";
 import Header from "@/components/Header";
 import Contact from "@/components/home/Contact";
+import ScrollToTop from "@/components/scrollToTop";
 import Image from "next/image";
 
-const vision = () => {
-  return <div></div>;
-};
+// const vision = () => {
+//   return <div></div>;
+// };
 
 export default function About() {
   return (
@@ -13,7 +14,10 @@ export default function About() {
       <Header />
       <div className="h-auto w-full pb-16">
         {/* Hero Section */}
-        <div className="w-full relative flex items-center justify-center h-fit">
+        <div
+          id="hero"
+          className="w-full relative flex items-center justify-center h-fit"
+        >
           <Image
             src="/images/site.png"
             alt="Explore Image"
@@ -111,6 +115,7 @@ export default function About() {
         </div>
       </div>
       <Contact />
+      <ScrollToTop />
     </div>
   );
 }

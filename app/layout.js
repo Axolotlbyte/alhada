@@ -64,9 +64,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={` antialiased bg-white text-black w-full`}
-      >
+      <body className={`antialiased bg-white text-black w-full select-none`}>
         {/* <Header /> */}
         {children}
         {/* <footer className="w-full h-fit flex flex-col">

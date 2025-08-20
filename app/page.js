@@ -54,7 +54,7 @@ export default function Home() {
         {scrollY > 800 ? (
           <button
             className={
-              "flex fixed bottom-5 right-5 bg-black/50 backdrop-blur rounded-full text-white items-center justify-center p-3 hover:scale-105 transition-transform duration-300 ease-in-out active:scale-100"
+              "flex fixed bottom-5 right-5 bg-[#384740]/70 backdrop-blur rounded-full text-white items-center justify-center p-3 hover:scale-105 transition-transform duration-300 ease-in-out active:scale-100"
             }
             onClick={() => scroll2El("hero")}
           >

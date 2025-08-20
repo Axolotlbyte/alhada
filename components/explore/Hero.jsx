@@ -1,6 +1,48 @@
 import Image from "next/image";
+import Link from "next/link";
+
+const NavButton = ({ label, link, position }) => {
+  return (
+    <Link href={link}>
+      <button
+        style={{ top: position.top, left: position.left }}
+        className="p-1 md:p-2 text-xs md:text-lg hover:scale-105 transition-all active:scale-100 absolute bg-[#c1a467] border aspect-square h-6 flex items-center justify-center md:h-10 font-bold text-white border-white rounded-full"
+      >
+        {label}
+      </button>
+    </Link>
+  );
+};
 
 const Hero = () => {
+  const buttons = [
+    {
+      label: "1",
+      link: "/explore/amenities",
+      position: { top: "40%", left: "32%" },
+    },
+    {
+      label: "2",
+      link: "/explore/apartments",
+      position: { top: "30%", left: "52%" },
+    },
+    {
+      label: "3",
+      link: "/explore/townhouses",
+      position: { top: "30%", left: "14%" },
+    },
+    {
+      label: "4",
+      link: "/explore/villas",
+      position: { top: "70%", left: "28%" },
+    },
+    {
+      label: "5",
+      link: "/explore/pools",
+      position: { top: "65%", left: "35%" },
+    },
+  ];
+
   return (
     <section className="hero h-fit relative">
       <div className="text-center relative">
@@ -13,44 +55,15 @@ const Hero = () => {
           className="w-full h-auto object-cover"
         />
 
-        {/* Village */}
-        <button className="p-2 text-sm md:text-lg hover:scale-105 transition-all active:scale-100 absolute top-[40%] left-[32%] bg-[#c1a467] border aspect-square h-8 flex items-center justify-center md:h-10 font-bold text-white border-white rounded-full">
-          1
-        </button>
-
-        {/* Apartments */}
-        <button className="p-2 text-sm md:text-lg hover:scale-105 transition-all active:scale-100 absolute top-[30%] left-[52%] bg-[#c1a467] border aspect-square h-8 flex items-center justify-center md:h-10 font-bold text-white border-white rounded-full">
-          2
-        </button>
-
-        {/* Townhouses */}
-        <button className="p-2 text-sm md:text-lg hover:scale-105 transition-all active:scale-100 absolute top-[30%] left-[14%] bg-[#c1a467] border aspect-square h-8 flex items-center justify-center md:h-10 font-bold text-white border-white rounded-full">
-          3
-        </button>
-
-        {/* Pools */}
-        <button className="p-2 text-sm md:text-lg hover:scale-105 transition-all active:scale-100 absolute top-[65%] left-[35%] bg-[#c1a467] border aspect-square h-8 flex items-center justify-center md:h-10 font-bold text-white border-white rounded-full">
-          4
-        </button>
+        {buttons.map((button, index) => (
+          <NavButton
+            position={button.position}
+            label={button.label}
+            link={button.link}
+            key={index}
+          />
+        ))}
       </div>
-      {/* <div className="absolute bottom-0 left-0 w-full h-full flex justify-center items-end">
-        <button className="bg-white rounded-full text-black p-2 md:p-5">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="size-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="m19.5 8.25-7.5 7.5-7.5-7.5"
-            />
-          </svg>
-        </button>
-      </div> */}
     </section>
   );
 };
