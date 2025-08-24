@@ -95,7 +95,7 @@ const Header = ({ home }) => {
                 onClick={() => scroll2El("contact")}
                 className="hover:scale-110 transition-transform duration-300"
               >
-                <button className="hover:text-black hover:bg-white border border-black p-2 px-4">
+                <button className=" hover:bg-[#354826] hover:text-white border border-black p-2 px-4">
                   Contact
                 </button>
               </li>
@@ -113,6 +113,9 @@ const Header = ({ home }) => {
           </Link>
           <div className="h-14 flex items-center justify-center w-full border-b bg-white">
             Dining
+          </div>
+          <div className="h-14 flex items-center justify-center w-full border-b bg-white">
+            Explore
           </div>
           {/* <div className="h-14 flex items-center justify-center w-full border-b bg-white">
             Events
