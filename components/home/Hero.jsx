@@ -18,7 +18,7 @@ const Nav = ({ img, title, lId, size }) => {
   return (
     <button
       onClick={() => scroll2El()}
-      className="w-full hover:scale-105 transition-all duration-300 active:scale-100 p-4 flex flex-col items-center justify-center font-bold gap-2 text-lg text-[#354826]"
+      className="w-full hover:scale-105 transition-all duration-300 active:scale-100 p-4 flex flex-col items-center text-center justify-center gap-2 text-lg text-black"
     >
       <Image
         src={img}
@@ -59,13 +59,15 @@ const Hero = () => {
             At Wadi Al Hada Resort — A Private Valley Where Life Flows with
             Comfort and Calm
           </span>
-          <div className="flex w-full h-fit gap-3 ">
+          <div className="flex items-center w-full h-fit gap-3 ">
             <Link href="/explore">
               <button className="bg-[#354826] text-white text-bold px-6 py-3 hover:scale-105 transition-all duration-300">
                 Explore
               </button>
             </Link>
-            <button className="text-[#354826] underline">Learn more</button>
+            <Link href={"/about"}>
+              <button className="text-[#354826] hover:no-underline hover:cursor-pointer underline">Learn more</button>
+            </Link>
           </div>
         </div>
         {/* Navbar bottom */}

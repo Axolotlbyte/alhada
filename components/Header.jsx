@@ -78,19 +78,19 @@ const Header = ({ home }) => {
         <div className="w-full hidden md:block">
           <nav className="flex justify-end mt-4">
             <ul className="flex items-center gap-8 text-sm">
-              <li className="hover:scale-110 transition-transform duration-300">
+              {/* <li className="hover:scale-110 transition-transform duration-300">
                 <Link href={"/about"}>About</Link>
-              </li>
-              <li className="hover:scale-110 transition-transform duration-300">
+              </li> */}
+              {/* <li className="hover:scale-110 transition-transform duration-300">
                 <a href="#services" className="">
                   Dining
                 </a>
-              </li>
-              <li className="hover:scale-110 transition-transform duration-300">
+              </li> */}
+              {/* <li className="hover:scale-110 transition-transform duration-300">
                 <a href="#services" className="">
                   Events
                 </a>
-              </li>
+              </li> */}
               <li
                 onClick={() => scroll2El("contact")}
                 className="hover:scale-110 transition-transform duration-300"
@@ -114,9 +114,9 @@ const Header = ({ home }) => {
           <div className="h-14 flex items-center justify-center w-full border-b bg-white">
             Dining
           </div>
-          <div className="h-14 flex items-center justify-center w-full border-b bg-white">
+          {/* <div className="h-14 flex items-center justify-center w-full border-b bg-white">
             Events
-          </div>
+          </div> */}
           <div className="h-14 flex items-center justify-center w-full border-b bg-white">
             Contact
           </div>{" "}

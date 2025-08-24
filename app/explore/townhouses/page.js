@@ -75,7 +75,7 @@ export default function UnitPage() {
 
       {/* Title */}
       <div className="flex flex-col py-6 pt-16 items-center justify-center w-11/12">
-        <h1>Apartments</h1>
+        <h1>Townhouses</h1>
         <p>Crafted for Comfort, Styled for Sophistication</p>
       </div>
 
@@ -181,42 +181,54 @@ export default function UnitPage() {
       </div>
 
       <div className="text-center py-16 w-1/2 flex flex-col gap-2 mx-auto">
-        <h3>
-          Fully Furnished Apartments <br />
-          1, 2, 3 & 4 Bedroom
-        </h3>
-        <p>Move-In Ready Comfort Meets Contemporary Living</p>
+        <h3> Sophisticated Living in Our Fully Furnished Townhouses</h3>
+        <p>
+          Step into a world of refined comfort and contemporary elegance. Our
+          fully furnished 4-bedroom townhouses are thoughtfully designed to
+          offer the perfect balance of privacy, style, and functionality—ideal
+          for families, professionals, or long-term guests seeking a seamless
+          living experience.
+        </p>
       </div>
 
       <section className="w-1/2 mx-auto grid gap-6 pb-16">
-        <p>
-          Discover a collection of thoughtfully designed apartments tailored to
-          modern lifestyles. Whether you're settling in solo, with family, or
-          hosting guests, our fully furnished 1, 2, 3, and 4-bedroom residences
-          offer the perfect blend of space, style, and convenience.
-        </p>
+        <div className="townhouse-listing">
+          <ul className="features-list list-disc pl-6">
+            <li>
+              <strong>Four spacious bedrooms</strong>, including a master suite
+              with en-suite bath and walk-in wardrobe
+            </li>
+            <li>
+              <strong>Designer furnishings</strong> curated for both aesthetic
+              appeal and everyday comfort
+            </li>
+            <li>
+              <strong>Open-plan living and dining areas</strong> with natural
+              light and premium finishes
+            </li>
+            <li>
+              <strong>Modern kitchen</strong> equipped with high-end appliances
+              and sleek cabinetry
+            </li>
+            <li>
+              <strong>Private outdoor space</strong>—perfect for morning coffee
+              or evening gatherings
+            </li>
+            <li>
+              <strong>Dedicated parking and 24/7 security</strong>, ensuring
+              peace of mind and convenience
+            </li>
+          </ul>
 
-        <ul className="list-disc pl-6">
-          <li>
-            <strong>2-Bedroom Apartments:</strong> Ideal for couples or
-            professionals seeking a balance of privacy and functionality.
-            Includes a spacious living area, dedicated workspace, and elegant
-            furnishings throughout.
-          </li>
-          <li>
-            <strong>3-Bedroom Apartments:</strong> Designed for growing families
-            or shared living, with generous common areas, en-suite master
-            bedrooms, and ample storage.
-          </li>
-          <li>
-            <strong>4-Bedroom Apartments:</strong> Perfect for larger households
-            or those who love to entertain. Features expansive layouts, multiple
-            bathrooms, and refined finishes that elevate everyday living.
-          </li>
-        </ul>
+          <p>
+            Whether you're relocating, settling in for an extended stay, or
+            simply seeking a turnkey lifestyle, these townhouses offer a
+            sanctuary of sophistication in a vibrant community setting.
+          </p>
+        </div>
 
         <h5>Each unit comes fully equipped with:</h5>
-        <ul>
+        <ul className="list-disc pl-6">
           <li>Premium furniture and curated décor</li>
           <li>Modern kitchen appliances and dinnerware</li>
           <li>In-unit laundry, high-speed Wi-Fi, and smart TVs</li>
