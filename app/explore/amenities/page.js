@@ -64,7 +64,7 @@ export default function UnitPage() {
 
       <div className="w-full aspect-video overflow-hidden flex items-center justify-center relative">
         <Image
-          src={"/images/room2.png"}
+          src={"/images/drone/events.jpg"}
           height={2000}
           width={2000}
           alt={unit.title}
@@ -92,7 +92,7 @@ export default function UnitPage() {
           arrows
           autoPlaySpeed={1000}
           // centerMode
-          // className=""
+          className="w-full"
           // containerClass="container"
           // dotListClass=""
           draggable
@@ -184,53 +184,78 @@ export default function UnitPage() {
       </div>
 
       <div className="text-center py-16 w-1/2 flex flex-col gap-2 mx-auto">
-        <h3>
-          Fully Furnished Apartments <br />
-          1, 2, 3 & 4 Bedroom
-        </h3>
-        <p>Move-In Ready Comfort Meets Contemporary Living</p>
+        <h3>Comprehensive Amenities</h3>
+        <p>
+          Designed to enrich daily life and elevate every experience, our
+          amenities area offers a seamless fusion of comfort, recreation,
+          productivity, and indulgence. 
+        </p>
       </div>
 
-      <section className="w-1/2 mx-auto grid gap-6 pb-16">
-        <p>
-          Discover a collection of thoughtfully designed apartments tailored to
-          modern lifestyles. Whether you're settling in solo, with family, or
-          hosting guests, our fully furnished 1, 2, 3, and 4-bedroom residences
-          offer the perfect blend of space, style, and convenience.
-        </p>
+      <section className="amenities-area w-1/2 mx-auto text-center flex flex-col gap-4">
 
-        <ul className="list-disc pl-6">
-          <li>
-            <strong>2-Bedroom Apartments:</strong> Ideal for couples or
-            professionals seeking a balance of privacy and functionality.
-            Includes a spacious living area, dedicated workspace, and elegant
-            furnishings throughout.
-          </li>
-          <li>
-            <strong>3-Bedroom Apartments:</strong> Designed for growing families
-            or shared living, with generous common areas, en-suite master
-            bedrooms, and ample storage.
-          </li>
-          <li>
-            <strong>4-Bedroom Apartments:</strong> Perfect for larger households
-            or those who love to entertain. Features expansive layouts, multiple
-            bathrooms, and refined finishes that elevate everyday living.
-          </li>
-        </ul>
+        <div className="amenities-section grid gap-4">
+          <h4> Essentials & Everyday Convenience</h4>
+          <p>
+            Residents enjoy effortless access to practical services including
+            modern laundry facilities and a well-stocked minimart for daily
+            necessities. These conveniences ensure that even routine tasks are
+            handled with ease, allowing more time for what truly matters.
+          </p>
 
-        <h5>Each unit comes fully equipped with:</h5>
-        <ul>
-          <li>Premium furniture and curated décor</li>
-          <li>Modern kitchen appliances and dinnerware</li>
-          <li>In-unit laundry, high-speed Wi-Fi, and smart TVs</li>
-          <li>Housekeeping and maintenance services available on request</li>
-        </ul>
+          <h4> Dining, Bars & Social Spaces</h4>
+          <p>
+            Culinary variety awaits with a selection of restaurants offering
+            both casual and fine dining experiences. The pool bar invites
+            sun-soaked relaxation with refreshing beverages, while the sports
+            bar provides a lively setting to catch the latest games and
+            socialize with fellow residents. Each venue is designed to foster
+            community and indulgence.
+          </p>
 
-        <p>
-          Whether you're here for a short stay or long-term comfort, our
-          apartments are ready to welcome you home — no setup, no stress, just
-          seamless living.
-        </p>
+          <h4> Pools & Aquatic Escapes</h4>
+          <p>
+            The lagoon pool offers a resort-style retreat surrounded by lush
+            landscaping, perfect for leisurely afternoons and family fun. For
+            year-round enjoyment, the indoor pool provides a tranquil,
+            climate-controlled environment ideal for swimming, wellness, or
+            quiet reflection.
+          </p>
+
+          <h4> Outdoor & Indoor Sports Facilities</h4>
+          <p>
+            Whether you're a seasoned athlete or simply enjoy staying active,
+            our sports facilities cater to every preference. Outdoor courts
+            include basketball, paddle, and tennis, all professionally
+            maintained for optimal play. Indoors, a full-sized basketball court
+            ensures uninterrupted activity regardless of weather.
+          </p>
+
+          <h4> Entertainment & Games</h4>
+          <p>
+            For relaxed recreation, the entertainment zone features a bowling
+            alley, billiards lounge, and foosball tables—perfect for friendly
+            competition or unwinding with friends and family. These spaces bring
+            playful energy and casual luxury to the heart of the community.
+          </p>
+
+          <h4> Business & Event Spaces</h4>
+          <p>
+            Productivity and celebration coexist in our versatile business and
+            event facilities. Private offices offer a quiet, professional
+            setting for focused work, while elegant meeting halls and a spacious
+            events area accommodate everything from corporate gatherings to
+            personal milestones. Each space is equipped to support both
+            efficiency and inspiration.
+          </p>
+
+          <p>
+            Altogether, this amenities area reflects a commitment to holistic
+            living—where every detail supports a lifestyle of ease, connection,
+            and elevated experience. Whether you're working, relaxing,
+            entertaining, or exploring, you'll find the perfect space to thrive.
+          </p>
+        </div>
       </section>
 
       <Services />
