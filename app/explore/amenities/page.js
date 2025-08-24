@@ -75,8 +75,11 @@ export default function UnitPage() {
 
       {/* Title */}
       <div className="flex flex-col py-6 pt-16 items-center justify-center w-11/12">
-        <h1>Apartments</h1>
-        <p>Crafted for Comfort, Styled for Sophistication</p>
+        <h1>Amenities</h1>
+        <p>
+          Thoughtfully curated amenities that elevate everyday living into a
+          seamless blend of comfort, luxury, and connection.
+        </p>
       </div>
 
       <div className="py-6 pb-16 w-11/12 mx-auto">

@@ -64,7 +64,7 @@ export default function UnitPage() {
 
       <div className="w-full aspect-video overflow-hidden flex items-center justify-center relative">
         <Image
-          src={"/images/room2.png"}
+          src={"/images/poolBig.png"}
           height={2000}
           width={2000}
           alt={unit.title}
@@ -75,8 +75,8 @@ export default function UnitPage() {
 
       {/* Title */}
       <div className="flex flex-col py-6 pt-16 items-center justify-center w-11/12">
-        <h1>Apartments</h1>
-        <p>Crafted for Comfort, Styled for Sophistication</p>
+        <h1>Pools</h1>
+        <p>Dive into Luxury, Float in Style</p>
       </div>
 
       <div className="py-6 pb-16 w-11/12 mx-auto">
@@ -137,37 +137,20 @@ export default function UnitPage() {
           slidesToSlide={1}
           swipeable
         >
-          <div className="w-full h-full">
-            <Image
-              src={unit.images[0]}
-              alt={unit.title}
-              height={2000}
-              width={2000}
-              className="w-full h-full transition-all duration-500"
-              draggable="false"
-            />
-          </div>
-          <div className="w-full">
-            <Image
-              src={unit.images[0]}
-              alt={unit.title}
-              height={2000}
-              width={2000}
-              className="w-full h-full object-cover transition-all duration-500"
-              draggable="false"
-            />
-          </div>
-          <div className="w-full">
-            <Image
-              src={unit.images[0]}
-              alt={unit.title}
-              height={2000}
-              width={2000}
-              className="w-full h-full object-cover transition-all duration-500"
-              draggable="false"
-            />
-          </div>
-          <div className="w-full">
+          {[0, 1, 2, 3].map((_, index) => (
+            <div className="w-full aspect-square flex items-center justify-center h-full">
+              <Image
+                src={"/images/poolBig.png"}
+                alt={unit.title}
+                height={2000}
+                width={2000}
+                className="w-full h-full transition-all duration-500"
+                draggable="false"
+              />
+            </div>
+          ))}
+
+          <div className="w-full aspect-square flex items-center justify-center">
             <Image
               src={unit.images[0]}
               alt={unit.title}

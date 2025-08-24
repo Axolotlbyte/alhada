@@ -18,26 +18,31 @@ const Hero = () => {
   const buttons = [
     {
       label: "1",
+      name: "Amenities",
       link: "/explore/amenities",
       position: { top: "40%", left: "32%" },
     },
     {
       label: "2",
+      name: "Apartments",
       link: "/explore/apartments",
       position: { top: "30%", left: "52%" },
     },
     {
       label: "3",
+      name: "Townhouses",
       link: "/explore/townhouses",
       position: { top: "30%", left: "14%" },
     },
     {
       label: "4",
+      name: "Villas",
       link: "/explore/villas",
       position: { top: "70%", left: "28%" },
     },
     {
       label: "5",
+      name: "Pools",
       link: "/explore/pools",
       position: { top: "65%", left: "35%" },
     },
@@ -63,6 +68,24 @@ const Hero = () => {
             key={index}
           />
         ))}
+      </div>
+      <div className="w-1/5 hidden md:flex h-auto absolute top-10 flex-col overflow-hidden gap-2 right-10 bg-white/30 backdrop-blur-xs rounded-sm">
+        {buttons.map((button, index) => (
+          <Link href={button.link} key={index} className="w-full">
+            <div className="h-fit flex gap-2 group hover:bg-white/100 overflow-hidden items-center w-full bg-white/20">
+              <div className="p-2 px-4 bg-[#c1a467]">{button.label}</div>
+              <div className="w-full">
+                <h6>{button.name}</h6>
+              </div>
+            </div>
+          </Link>
+        ))}
+        {/* <div className="p-2 bg-white/80 rounded">
+          <span className="">2</span>
+        </div>
+        <div className="p-2 bg-white/80 rounded">
+          <span className="">3</span>
+        </div> */}
       </div>
     </section>
   );

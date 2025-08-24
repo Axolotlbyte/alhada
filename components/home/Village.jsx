@@ -99,12 +99,21 @@ const Village = () => {
       <div className="w-11/12 mx-auto">
         <Break />
       </div>
-      <div className="w-full text-center py-16">
+      <div className="w-full text-center pt-16">
         <div className="w-11/12 max-w-3xl mx-auto text-center">
           <h2 className="font-bold text-black mb-4">The Village Amenities</h2>
           <p className=" text-gray-800">
             A refined sanctuary where modern luxury meets timeless comfort
           </p>
+        </div>
+        <div>
+          <Image
+            src={"/images/village.jpg"}
+            alt="Village Image"
+            width={2000}
+            height={1000}
+            className="w-full h-auto object-cover mt-8"
+          />
         </div>
       </div>
 

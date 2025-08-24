@@ -180,7 +180,7 @@ export default function UnitPage() {
         </Carousel>
       </div>
 
-      <div className="text-center py-16 w-1/2 flex flex-col gap-2 mx-auto">
+      <div className="text-center py-16 w-11/12 md:w-1/2 flex flex-col gap-2 mx-auto">
         <h3>
           Fully Furnished Apartments <br />
           1, 2, 3 & 4 Bedroom
@@ -188,7 +188,7 @@ export default function UnitPage() {
         <p>Move-In Ready Comfort Meets Contemporary Living</p>
       </div>
 
-      <section className="w-1/2 mx-auto grid gap-6 pb-16">
+      <section className="w-11/12 md:w-1/2 mx-auto grid gap-6 pb-16">
         <p>
           Discover a collection of thoughtfully designed apartments tailored to
           modern lifestyles. Whether you're settling in solo, with family, or
@@ -216,7 +216,7 @@ export default function UnitPage() {
         </ul>
 
         <h5>Each unit comes fully equipped with:</h5>
-        <ul>
+        <ul className="list-disc pl-6">
           <li>Premium furniture and curated décor</li>
           <li>Modern kitchen appliances and dinnerware</li>
           <li>In-unit laundry, high-speed Wi-Fi, and smart TVs</li>
