@@ -111,12 +111,16 @@ const Header = ({ home }) => {
               About
             </div>
           </Link>
-          <div className="h-14 flex items-center justify-center w-full border-b bg-white">
-            Dining
-          </div>
-          <div className="h-14 flex items-center justify-center w-full border-b bg-white">
-            Explore
-          </div>
+          <Link href={"/dining"}>
+            <div className="h-14 flex items-center justify-center w-full border-b bg-white">
+              Dining
+            </div>
+          </Link>
+          <Link href={"/explore"}>
+            <div className="h-14 flex items-center justify-center w-full border-b bg-white">
+              Explore
+            </div>
+          </Link>
           {/* <div className="h-14 flex items-center justify-center w-full border-b bg-white">
             Events
           </div> */}

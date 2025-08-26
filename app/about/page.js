@@ -68,7 +68,7 @@ export default function About() {
         <div className="w-11/12 flex flex-col gap-6 mx-auto">
           <Break />
           <h2>Our Story</h2>
-          <div className="w-3/5 grid gap-4">
+          <div className="w-11/12 md:w-3/5 grid gap-4">
             <p>
               <b>From Wadi to Sanctuary Once</b>, this land was a quiet wadi—an
               ancient valley carved by time and seasonal rains, where desert

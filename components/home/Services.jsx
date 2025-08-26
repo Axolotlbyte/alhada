@@ -54,7 +54,7 @@ const data = [
   },
 ];
 
-const Services = () => {
+const Services = ({data0}) => {
   return (
     <section id={"services"} className="py-13 w-full flex flex-col gap-4">
       <div className="w-11/12 mx-auto">
