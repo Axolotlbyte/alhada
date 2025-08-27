@@ -47,6 +47,44 @@ const responsive = {
   },
 };
 
+const services = [
+  {
+    img: "/images/services/security.png",
+    title: "Free public Wi-Fi",
+    desc: "Enjoy complimentary high-speed internet access throughout the premises, keeping you connected whether you're working or relaxing.",
+  },
+  {
+    img: "/images/services/laundry.png",
+    title: "Laundry Services",
+    desc: "Convenient on-site laundry facilities to keep your clothes fresh and clean without leaving the premises.",
+  },
+  {
+    img: "/images/services/laundry.png",
+    title: "Offices and Meeting Rooms",
+    desc: "Professional workspaces and meeting rooms equipped with modern amenities to support your business needs.",
+  },
+  {
+    img: "/images/services/grocery.png",
+    title: "On-site Grocery Store",
+    desc: "Access to a well-stocked grocery store right where you live, making shopping easy and convenient.",
+  },
+  {
+    img: "/images/services/parking.png",
+    title: "Indoor Pool and Outdoor Pool",
+    desc: "Enjoy both indoor and outdoor swimming pools, perfect for relaxation and exercise in any weather.",
+  },
+  {
+    img: "/images/services/barber.png",
+    title: "Hair dressing",
+    desc: "Professional hairdressing services available on-site, ensuring you always look your best.",
+  },
+  {
+    img: "/images/services/barber.png",
+    title: "Games Lounge",
+    desc: "A dedicated games lounge featuring Billiards, Bowling, and more for fun and entertainment.",
+  },
+];
+
 export default function UnitPage() {
   const [current, setCurrent] = useState(0);
 
@@ -188,12 +226,11 @@ export default function UnitPage() {
         <p>
           Designed to enrich daily life and elevate every experience, our
           amenities area offers a seamless fusion of comfort, recreation,
-          productivity, and indulgence. 
+          productivity, and indulgence.
         </p>
       </div>
 
       <section className="amenities-area w-1/2 mx-auto text-center flex flex-col gap-4">
-
         <div className="amenities-section grid gap-4">
           <h4> Essentials & Everyday Convenience</h4>
           <p>
@@ -258,7 +295,7 @@ export default function UnitPage() {
         </div>
       </section>
 
-      <Services />
+      <Services data={services} />
 
       <Contact />
     </main>

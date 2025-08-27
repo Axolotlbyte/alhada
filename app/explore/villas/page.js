@@ -47,6 +47,29 @@ const responsive = {
   },
 };
 
+const services = [
+  {
+    img: "/images/services/security.png",
+    title: "Smart Lock Entry Systems",
+    desc: "Experience keyless convenience and enhanced security with our state-of-the-art smart lock systems, allowing you to access your apartment effortlessly.",
+  },
+  {
+    img: "/images/services/security.png",
+    title: "Free Wi-Fi",
+    desc: "Enjoy complimentary high-speed internet access throughout the premises, keeping you connected whether you're working or relaxing.",
+  },
+  {
+    img: "/images/services/security.png",
+    title: "Fully Furnished Apartments",
+    desc: "Move-in ready apartments with stylish furniture and modern amenities for your comfort.",
+  },
+  {
+    img: "/images/services/security.png",
+    title: "Located Nearby Pools",
+    desc: "Convenient access to pools for relaxation and exercise.",
+  },
+];
+
 export default function UnitPage() {
   const [current, setCurrent] = useState(0);
 
@@ -230,7 +253,7 @@ export default function UnitPage() {
         </p>
       </section>
 
-      <Services />
+      <Services data={services} />
 
       <Contact />
     </main>

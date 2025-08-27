@@ -163,57 +163,56 @@ export default function UnitPage() {
         </Carousel>
       </div>
 
-      <div className="text-center py-16 w-1/2 flex flex-col gap-2 mx-auto">
-        <h3>
-          Fully Furnished Apartments <br />
-          1, 2, 3 & 4 Bedroom
-        </h3>
-        <p>Move-In Ready Comfort Meets Contemporary Living</p>
+      <div className="w-1/2 mx-auto text-center mt-16">
+        <h3>A Sanctuary of Pools for Every Mood and Moment</h3>
       </div>
 
-      <section className="w-1/2 mx-auto grid gap-6 pb-16">
+      <section className="py-16 w-1/2 flex flex-col gap-2 mx-auto">
         <p>
-          Discover a collection of thoughtfully designed apartments tailored to
-          modern lifestyles. Whether you're settling in solo, with family, or
-          hosting guests, our fully furnished 1, 2, 3, and 4-bedroom residences
-          offer the perfect blend of space, style, and convenience.
+          Dive into a world of aquatic elegance with our collection of{" "}
+          <strong>nine onsite pools</strong>, each designed to elevate your
+          experience—whether you're seeking invigorating laps, sun-drenched
+          relaxation, or serene privacy.
         </p>
 
         <ul className="list-disc pl-6">
           <li>
-            <strong>2-Bedroom Apartments:</strong> Ideal for couples or
-            professionals seeking a balance of privacy and functionality.
-            Includes a spacious living area, dedicated workspace, and elegant
-            furnishings throughout.
+            <strong>Olympic-Style Indoor Pool</strong>: Perfect for serious
+            swimmers and wellness enthusiasts, this temperature-controlled haven
+            offers year-round comfort and professional-grade dimensions.
           </li>
           <li>
-            <strong>3-Bedroom Apartments:</strong> Designed for growing families
-            or shared living, with generous common areas, en-suite master
-            bedrooms, and ample storage.
+            <strong>Main Lagoon Pool</strong>: The heart of our outdoor oasis,
+            this expansive, resort-style pool invites guests to unwind amidst
+            lush landscaping and gentle curves that evoke a tropical escape.
           </li>
           <li>
-            <strong>4-Bedroom Apartments:</strong> Perfect for larger households
-            or those who love to entertain. Features expansive layouts, multiple
-            bathrooms, and refined finishes that elevate everyday living.
+            <strong>Five Outdoor Pools</strong>: Strategically nestled near
+            residential clusters, these pools offer easy access and varied
+            atmospheres—from tranquil retreats to family-friendly fun.
           </li>
-        </ul>
-
-        <h5>Each unit comes fully equipped with:</h5>
-        <ul>
-          <li>Premium furniture and curated décor</li>
-          <li>Modern kitchen appliances and dinnerware</li>
-          <li>In-unit laundry, high-speed Wi-Fi, and smart TVs</li>
-          <li>Housekeeping and maintenance services available on request</li>
+          <li>
+            <strong>Three Private Villa Pools</strong>: Reserved exclusively for
+            our villa residents, these secluded gems promise uninterrupted
+            serenity and personalized luxury.
+          </li>
+          <li>
+            <strong>Poolside Indulgence</strong>: The first two outdoor pools,
+            located in the central amenities area, are complemented by a stylish{" "}
+            <em>pool bar</em>, serving refreshing cocktails, gourmet bites, and
+            shaded lounge seating—ideal for socializing or simply soaking in the
+            ambiance.
+          </li>
         </ul>
 
         <p>
-          Whether you're here for a short stay or long-term comfort, our
-          apartments are ready to welcome you home — no setup, no stress, just
-          seamless living.
+          Whether you're starting your day with a swim, hosting sunset
+          gatherings, or escaping into quiet reflection, our poolscape is
+          crafted to meet every desire with grace and sophistication.
         </p>
       </section>
 
-      <Services />
+      <Services data={[]} />
 
       <Contact />
     </main>

@@ -78,9 +78,9 @@ const Header = ({ home }) => {
         <div className="w-full hidden md:block">
           <nav className="flex justify-end mt-4">
             <ul className="flex items-center gap-8 text-sm">
-              {/* <li className="hover:scale-110 transition-transform duration-300">
+              <li className="hover:scale-110 transition-transform duration-300">
                 <Link href={"/about"}>About</Link>
-              </li> */}
+              </li>
               {/* <li className="hover:scale-110 transition-transform duration-300">
                 <a href="#services" className="">
                   Dining
@@ -91,6 +91,9 @@ const Header = ({ home }) => {
                   Events
                 </a>
               </li> */}
+              <li className="hover:scale-110 transition-transform duration-300">
+                <Link href={"/explore"}>Explore</Link>
+              </li>
               <li
                 onClick={() => scroll2El("contact")}
                 className="hover:scale-110 transition-transform duration-300"
@@ -107,26 +110,39 @@ const Header = ({ home }) => {
       {isOpen ? (
         <>
           <Link href={"/about"}>
-            <div className="h-14 mt-2 flex items-center justify-center border-b w-full bg-white">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="h-14 mt-2 flex items-center justify-center border-b w-full bg-white"
+            >
               About
-            </div>
+            </button>
           </Link>
-          <Link href={"/dining"}>
+          {/* <Link href={"/dining"}>
             <div className="h-14 flex items-center justify-center w-full border-b bg-white">
               Dining
             </div>
-          </Link>
+          </Link> */}
           <Link href={"/explore"}>
-            <div className="h-14 flex items-center justify-center w-full border-b bg-white">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="h-14 flex items-center justify-center w-full border-b bg-white"
+            >
               Explore
-            </div>
+            </button>
           </Link>
           {/* <div className="h-14 flex items-center justify-center w-full border-b bg-white">
             Events
           </div> */}
-          <div className="h-14 flex items-center justify-center w-full border-b bg-white">
+          <button
+            onClick={() => {
+              setIsOpen(false);
+              scroll2El("contact");
+              return;
+            }}
+            className="h-14 bg-gradient-to-l from-emerald-200 to-green-200 flex items-center justify-center w-full border-b bg-white"
+          >
             Contact
-          </div>{" "}
+          </button>{" "}
         </>
       ) : null}
     </header>

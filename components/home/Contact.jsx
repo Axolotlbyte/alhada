@@ -17,7 +17,7 @@ const Contact = () => {
     <section
       id="contact"
       style={{ backgroundImage: `url(${contactImg.src})` }}
-      className="w-full bg-cover h-screen flex items-center justify-center"
+      className="w-full bg-cover h-fit py-8 md:py-16 flex items-center justify-center"
     >
       <div className="flex flex-col p-4 gap-8 items-center justify-center bg-white/70 backdrop-blur-xl rounded-sm bg-opacity-60 text-center h-fit w-11/12 md:w-1/2 bg-opacity-20">
         <h2 className=" text-white font-bold">Contact Us</h2>

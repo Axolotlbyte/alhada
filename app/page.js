@@ -34,6 +34,34 @@ export default function Home() {
     };
   }, []);
 
+  const services = [
+    {
+      img: "/images/services/security.png",
+      title: "24/7 Security",
+      desc: "Feel safe around the clock with gated access, surveillance, and trained security personnel dedicated to your peace of mind.",
+    },
+    {
+      img: "/images/services/laundry.png",
+      title: "Laundry Services",
+      desc: "Convenient on-site laundry facilities to keep your clothes fresh and clean without leaving the premises.",
+    },
+    {
+      img: "/images/services/grocery.png",
+      title: "On-site Grocery Store",
+      desc: "Access to a well-stocked grocery store right where you live, making shopping easy and convenient.",
+    },
+    {
+      img: "/images/services/parking.png",
+      title: "Secure Parking",
+      desc: "Safe and convenient parking options available for residents, ensuring your vehicle is protected at Wadi al Hada",
+    },
+    {
+      img: "/images/services/barber.png",
+      title: "Hair dressing",
+      desc: "Professional hairdressing services available on-site, ensuring you always look your best.",
+    },
+  ];
+
   return (
     <div className="font-[family-name:var(--font-outfit)] w-full bg-white">
       <Header home />
@@ -41,14 +69,8 @@ export default function Home() {
         <Hero />
         <Welcome />
         <Housing />
-        {/* <Pools />
-        <Gym />
-        <Dining />
-        <Games /> 
-        <Services /> */}
-
         <Village />
-        <Services />
+        <Services data={services} />
         <Contact />
 
         {scrollY > 800 ? (
