@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="w-full border-y-8 text-black bg-white border-[#7E975D] my-6 font-[family-name:var(--font-outfit)] h-fit flex ">
+    <footer className="w-full border-y-8 text-black bg-white border-[#7E975D] my-6 mb-2 font-[family-name:var(--font-outfit)] h-fit flex ">
       {/* <div className="w-full p-1 my-6 bg-[#D4AA00]"></div> */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {/* Logo */}
@@ -152,6 +152,7 @@ const Footer = () => {
       </div>
 
       {/* <div className="w-full p-1 my-6 bg-[#D4AA00]"></div> */}
+      
     </footer>
   );
 };

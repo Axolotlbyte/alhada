@@ -16,7 +16,7 @@ export default function About() {
         {/* Hero Section */}
         <div
           id="hero"
-          className="w-full relative flex items-center justify-center h-fit"
+          className="w-full relative overflow-hidden flex items-center justify-center h-fit"
         >
           <Image
             src="/images/site.png"
@@ -24,6 +24,36 @@ export default function About() {
             width={2000}
             height={2000}
             className="w-full h-auto object-cover"
+          />
+
+          <Image
+            src="/invertedLogo.png"
+            alt="Explore Image"
+            width={2000}
+            height={2000}
+            className="w-[53%] rotate-180 h-auto opacity-30 object-cover absolute -top-[19%] -left-[1%]"
+          />
+          <Image
+            src="/invertedLogo.png"
+            alt="Explore Image"
+            width={2000}
+            height={2000}
+            className="w-[53%] rotate-180 h-auto opacity-30 object-cover absolute -top-[19%] -right-[1%]"
+          />
+
+          <Image
+            src="/invertedLogo.png"
+            alt="Explore Image"
+            width={2000}
+            height={2000}
+            className="w-[53%]  h-auto opacity-30 object-cover absolute -bottom-[19%] -left-[1%]"
+          />
+          <Image
+            src="/invertedLogo.png"
+            alt="Explore Image"
+            width={2000}
+            height={2000}
+            className="w-[53%]  h-auto opacity-30 object-cover absolute -bottom-[19%] -right-[1%]"
           />
           <div className="absolute flex flex-col items-center justify-center top-0 left-0 w-full h-full bg-[#839563]/90">
             {/* <Image
@@ -40,7 +70,7 @@ export default function About() {
         </div>
 
         {/* vision */}
-        <div className="w-11/12 mx-auto py-16 relative overflow-hidden flex flex-col gap-6">
+        <div className="w-11/12 text-center mx-auto py-16 relative overflow-hidden flex flex-col gap-6">
           <h2>Our Vision</h2>
           <p>
             To create Riyadh’s premier Western-style compound resort—an enclave
@@ -65,10 +95,10 @@ export default function About() {
         </div>
 
         {/* Story */}
-        <div className="w-11/12 flex flex-col gap-6 mx-auto">
+        <div className="w-11/12 text-center flex flex-col gap-6 mx-auto">
           <Break />
           <h2>Our Story</h2>
-          <div className="w-11/12 md:w-3/5 grid gap-4">
+          <div className="w-11/12 md:w-3/5 mx-auto grid gap-4">
             <p>
               <b>From Wadi to Sanctuary Once</b>, this land was a quiet wadi—an
               ancient valley carved by time and seasonal rains, where desert

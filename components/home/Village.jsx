@@ -1,5 +1,8 @@
+"use client";
 import Break from "../Break.jsx";
 import Image from "next/image";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const CardWithCircle = ({ imageSrc, title, reverse, lId, desc, elongated }) => {
   return (
@@ -54,13 +57,14 @@ const Wellness = ({ lId, title, desc }) => {
       <div className="w-full grid gap-4 py-4 pt-8 px-4 grid-cols-2 md:grid-cols-4">
         <div className="w-full h-auto bg-white">
           <Image
-            src={"/images/wellness/gym.png"}
+            src={"/images/wellness/spa.png"}
             alt="Gym Image"
             width={800}
             height={600}
             className="w-full h-full object-cover"
           />
         </div>
+
         <div className="w-full h-auto flex items-center justify-center bg-white">
           <Image
             src={"/images/wellness/sauna.png"}
@@ -70,15 +74,7 @@ const Wellness = ({ lId, title, desc }) => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="w-full h-auto bg-white">
-          <Image
-            src={"/images/wellness/spa.png"}
-            alt="Gym Image"
-            width={800}
-            height={600}
-            className="w-full h-full object-cover"
-          />
-        </div>
+
         <div className="w-full h-auto bg-white">
           <Image
             src={"/images/wellness/yoga.png"}
@@ -88,7 +84,195 @@ const Wellness = ({ lId, title, desc }) => {
             className="w-full h-full object-cover"
           />
         </div>
+
+        <div className="w-full h-auto bg-white">
+          <Image
+            src={"/images/wellness/gym.png"}
+            alt="Gym Image"
+            width={800}
+            height={600}
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
+    </section>
+  );
+};
+
+const Games = ({ lId, title, desc }) => {
+  return (
+    <section
+      id={lId}
+      className="w-full flex flex-col text-black bg-[#a3c78a] py-8 items-center justify-center text-center"
+    >
+      <div className="flex flex-col gap-4">
+        <h3 className="font-bold text-black">
+          {title ? title : "Wellness Retreat"}
+        </h3>
+        <p className="text-black">
+          {/* Find your balance with calming spaces designed to restore body and
+          mind. */}
+          {desc ? desc : ""}
+        </p>
+      </div>
+      <div className="w-full h-auto py-4 pt-8 flex items-center justify-center">
+        <Carousel
+          additionalTransfrom={0}
+          arrows
+          autoPlay
+          autoPlaySpeed={1000}
+          centerMode={false}
+          className="w-full"
+          containerClass="container-with-dots"
+          dotListClass=""
+          draggable
+          focusOnSelect={false}
+          infinite
+          itemClass="p-2"
+          keyBoardControl
+          minimumTouchDrag={80}
+          pauseOnHover
+          renderArrowsWhenDisabled={false}
+          renderButtonGroupOutside={false}
+          renderDotsOutside={false}
+          responsive={{
+            desktop: {
+              breakpoint: {
+                max: 3000,
+                min: 1024,
+              },
+              items: 4,
+              partialVisibilityGutter: 40,
+            },
+            mobile: {
+              breakpoint: {
+                max: 464,
+                min: 0,
+              },
+              items: 1,
+              partialVisibilityGutter: 30,
+            },
+            tablet: {
+              breakpoint: {
+                max: 1024,
+                min: 464,
+              },
+              items: 2,
+              partialVisibilityGutter: 30,
+            },
+          }}
+          rewind={false}
+          rewindWithAnimation={false}
+          rtl={false}
+          shouldResetAutoplay
+          showDots={false}
+          sliderClass=""
+          slidesToSlide={1}
+          swipeable
+        >
+          <div className="w-full h-auto bg-white">
+            <Image
+              src={"/images/wellness/spa.png"}
+              alt="Gym Image"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="w-full h-auto bg-white">
+            <Image
+              src={"/images/wellness/spa.png"}
+              alt="Gym Image"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="w-full h-auto bg-white">
+            <Image
+              src={"/images/wellness/spa.png"}
+              alt="Gym Image"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="w-full h-auto bg-white">
+            <Image
+              src={"/images/wellness/spa.png"}
+              alt="Gym Image"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="w-full h-auto bg-white">
+            <Image
+              src={"/images/wellness/spa.png"}
+              alt="Gym Image"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="w-full h-auto bg-white">
+            <Image
+              src={"/images/wellness/spa.png"}
+              alt="Gym Image"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </Carousel>
+      </div>
+
+      {/* <div className="w-full grid gap-4 py-4 pt-8 px-4 grid-cols-2 md:grid-cols-4">
+        <div className="w-full h-auto bg-white">
+          <Image
+            src={"/images/wellness/spa.png"}
+            alt="Gym Image"
+            width={800}
+            height={600}
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <div className="w-full h-auto flex items-center justify-center bg-white">
+          <Image
+            src={"/images/wellness/sauna.png"}
+            alt="Gym Image"
+            width={800}
+            height={600}
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <div className="w-full h-auto bg-white">
+          <Image
+            src={"/images/wellness/yoga.png"}
+            alt="Gym Image"
+            width={800}
+            height={600}
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <div className="w-full h-auto bg-white">
+          <Image
+            src={"/images/wellness/gym.png"}
+            alt="Gym Image"
+            width={800}
+            height={600}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div> */}
     </section>
   );
 };
@@ -132,7 +316,7 @@ const Village = () => {
             "Step into calm and comfort with our beautifully designed pools. Surrounded by greenery and soft lighting, each space invites you to unwind in style. Whether you're floating in a sleek infinity pool, lounging in a shaded cabana, or enjoying a quiet evening swim, every detail is crafted to make you feel pampered and refreshed."
           }
         />
-        <Wellness
+        <Games
           lId={"games"}
           title={"Park & Play"}
           desc={"A Sanctuary for Sport, Play, and Connection"}

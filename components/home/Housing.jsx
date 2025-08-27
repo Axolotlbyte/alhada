@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Break from "../Break.jsx";
+import Link from "next/link";
 
-const Card = ({ imageSrc, title }) => {
+const Card = ({ imageSrc, title, href }) => {
   return (
-    <div className="flex group overflow-hidden flex-col items-center justify-center gap-6 py-4">
+    <div className="flex group flex-col items-center justify-center gap-6 py-4">
       <div className="w-full overflow-hidden">
         <Image
           src="/images/units/room.png"
@@ -22,10 +23,12 @@ const Card = ({ imageSrc, title }) => {
       </div>
 
       <div className="w-full flex justify-baseline">
-        <button className="bg-[#354826] text-white font-normal text-sm px-6 py-2 hover:scale-105 transition-all duration-300">
-          {" "}
-          Learn More
-        </button>
+        <Link href={href} passHref>
+          <button className="bg-[#354826] text-white font-normal text-sm px-6 py-2 hover:scale-105 transition-all duration-300">
+            {" "}
+            Learn More
+          </button>
+        </Link>
       </div>
     </div>
   );
@@ -68,9 +71,9 @@ const Housing = () => {
             </p>
           </div>
         </div> */}
-        <Card title={"Villa"} />
-        <Card title={"Townhouse"} />
-        <Card title={"Apartment"} />
+        <Card title={"Villa"} href={"/explore/villas"} />
+        <Card title={"Townhouse"} href={"/explore/townhouses"} />
+        <Card title={"Apartment"} href={"/explore/apartments"} />
       </div>
     </div>
   );

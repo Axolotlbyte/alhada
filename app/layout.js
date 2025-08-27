@@ -190,6 +190,9 @@ export default function RootLayout({ children }) {
           <div className="w-full p-1 my-6 bg-orange-300"></div>
         </footer> */}
         <Footer />
+        <div className="flex items-center justify-center pb-2">
+          <p style={{fontSize: "14px"}} className="text-sm">Copyright © 2025 Wadi Al Hada Resort. All rights reserved.</p>
+        </div>
       </body>
     </html>
   );

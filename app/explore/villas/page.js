@@ -83,14 +83,14 @@ export default function UnitPage() {
         <Break />
       </div>
       {/* Carousel */}
-      <div className="w-full h-auto">
+      <div className="w-full h-auto flex items-center justify-center">
         <Carousel
           additionalTransfrom={0}
           arrows
           autoPlaySpeed={1000}
           // centerMode
           className=""
-          containerClass="container"
+          containerClass="container w-full"
           dotListClass=""
           draggable
           focusOnSelect={false}

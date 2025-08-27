@@ -86,7 +86,7 @@ export default function UnitPage() {
         <Break />
       </div>
       {/* Carousel */}
-      <div className="w-full h-auto">
+      <div className="w-full flex items-center justify-center h-auto">
         <Carousel
           additionalTransfrom={0}
           arrows
