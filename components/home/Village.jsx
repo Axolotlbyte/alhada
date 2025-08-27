@@ -302,13 +302,6 @@ const Village = () => {
       </div>
 
       <div className="w-full flex flex-col">
-        <Wellness
-          lId={"gyms"}
-          title={"Wellness Retreat"}
-          desc={
-            "Find your balance with calming spaces designed to restore body and mind."
-          }
-        />
         <CardWithCircle
           lId={"pools"}
           imageSrc={"/images/poolBig.png"}
@@ -316,11 +309,14 @@ const Village = () => {
             "Step into calm and comfort with our beautifully designed pools. Surrounded by greenery and soft lighting, each space invites you to unwind in style. Whether you're floating in a sleek infinity pool, lounging in a shaded cabana, or enjoying a quiet evening swim, every detail is crafted to make you feel pampered and refreshed."
           }
         />
-        <Games
-          lId={"games"}
-          title={"Park & Play"}
-          desc={"A Sanctuary for Sport, Play, and Connection"}
+        <Wellness
+          lId={"gyms"}
+          title={"Wellness Retreat"}
+          desc={
+            "Find your balance with calming spaces designed to restore body and mind."
+          }
         />
+
         <CardWithCircle
           title={"Fine Dining"}
           imageSrc={"/images/restaurant.png"}
@@ -329,6 +325,12 @@ const Village = () => {
             "Wadi Al Hada Restaurant offers a relaxed yet refined dining experience where flavor and ambiance come together effortlessly. With a menu inspired by global cuisines and crafted from fresh, seasonal ingredients, every dish is designed to satisfy both casual cravings and elevated tastes. From energizing breakfasts to elegant dinners, the atmosphere invites guests to slow down and savor."
           }
           lId={"dining"}
+        />
+
+        <Games
+          lId={"games"}
+          title={"Park & Play"}
+          desc={"A Sanctuary for Sport, Play, and Connection"}
         />
       </div>
     </section>

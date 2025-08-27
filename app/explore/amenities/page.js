@@ -97,7 +97,7 @@ export default function UnitPage() {
   };
 
   return (
-    <main className="w-full overflow-hidden min-h-screen flex flex-col items-center justify-center">
+    <main className="w-full pt-24 overflow-hidden min-h-screen flex flex-col items-center justify-center">
       <Header home />
 
       <div className="w-full aspect-video overflow-hidden flex items-center justify-center relative">

@@ -82,7 +82,7 @@ export default function UnitPage() {
   };
 
   return (
-    <main className="w-full overflow-hidden min-h-screen flex flex-col items-center justify-center">
+    <main className="w-full pt-24 overflow-hidden min-h-screen flex flex-col items-center justify-center">
       <Header home />
 
       <div className="w-full aspect-video overflow-hidden flex items-center justify-center relative">
@@ -98,7 +98,7 @@ export default function UnitPage() {
 
       {/* Title */}
       <div className="flex flex-col py-6 pt-16 items-center justify-center w-11/12">
-        <h1>Apartments</h1>
+        <h1>Villas</h1>
         <p>Crafted for Comfort, Styled for Sophistication</p>
       </div>
 

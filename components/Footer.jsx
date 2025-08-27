@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -125,18 +126,22 @@ const Footer = () => {
         <div className="flex flex-col p-6 items-start justify-center h-fit w-full gap-3">
           <h5 className="font-bold">Quick Links</h5>
           <div className="flex flex-col gap-3">
-            <span className="underline cursor-pointer text-blue-600 ">
-              About Us
-            </span>
-            <span className="underline cursor-pointer text-blue-600">
-              Explore
-            </span>
-            <span className="underline cursor-pointer text-blue-600">
+            <Link href={"/about"}>
+              <span className="underline cursor-pointer text-blue-600 ">
+                About Us
+              </span>
+            </Link>
+            <Link href={"/explore"}>
+              <span className="underline cursor-pointer text-blue-600">
+                Explore
+              </span>
+            </Link>
+            {/* <span className="underline cursor-pointer text-blue-600">
               Dining
             </span>
             <span className="underline cursor-pointer text-blue-600">
               Events
-            </span>
+            </span> */}
           </div>
         </div>
 
@@ -152,7 +157,6 @@ const Footer = () => {
       </div>
 
       {/* <div className="w-full p-1 my-6 bg-[#D4AA00]"></div> */}
-      
     </footer>
   );
 };
