@@ -4,7 +4,8 @@ import { useRef, useState } from "react";
 import SignaturePad from "react-signature-canvas";
 import { jsPDF } from "jspdf";
 
-import generateClientPDF from "../../utils/generatePdf";
+import generatePdf from "@/utils/generatePdf";
+
 
 export default function Page() {
   const sigPadRef = useRef(null);
@@ -64,10 +65,21 @@ export default function Page() {
       ? null
       : sigPadRef.current.getTrimmedCanvas().toDataURL("image/png");
 
-    await generateClientPDF({
-      ...form, // expands: requestSubject, requestedBy, unitAddress, etc.
+    // Open a blank tab immediately — allowed by browser
+    const newTab = window.open("", "_blank");
+
+    // Generate the PDF
+    const pdfBytes = await generatePdf({
+      ...form,
       signatureDataUrl: signatureData,
     });
+
+    // Create blob + URL
+    const blob = new Blob([pdfBytes], { type: "application/pdf" });
+    const url = URL.createObjectURL(blob);
+
+    // Assign the blob URL to the tab
+    newTab.location.href = url;
   };
 
   return (

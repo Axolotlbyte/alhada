@@ -4,8 +4,6 @@ import { PDFDocument, rgb, StandardFonts } from "pdf-lib";
 
 function wrapText(text: string, font: any, fontSize: number, maxWidth: number) {
   const lines: string[] = [];
-
-  // Split by existing line breaks first
   const paragraphs = text.split(/\r?\n/);
 
   for (const paragraph of paragraphs) {
@@ -29,7 +27,6 @@ function wrapText(text: string, font: any, fontSize: number, maxWidth: number) {
 
   return lines.join("\n");
 }
-
 
 export default async function generatePdf({
   subject,
@@ -56,28 +53,20 @@ export default async function generatePdf({
   initials: string;
   signatureDataUrl: string;
 }) {
-  // Load PDF template
   const existingPdfBytes = await fetch("/ChangeTemplate.pdf").then((res) =>
     res.arrayBuffer()
   );
 
-  console.log(requester);
-
   const templatePdf = await PDFDocument.load(existingPdfBytes);
-
-  // Create new PDF where we will draw (fix for Google Docs PDFs)
   const pdfDoc = await PDFDocument.create();
   const [srcPage] = templatePdf.getPages();
   const { width, height } = srcPage.getSize();
 
-  // Flatten Google Docs PDF page
   const embeddedPage = await pdfDoc.embedPage(srcPage);
   const page = pdfDoc.addPage([width, height]);
 
-  // Draw the template page as background
   page.drawPage(embeddedPage, { x: 0, y: 0, width, height });
 
-  // Text font
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
   const draw = (text: string, x: number, y: number, size = 10) => {
@@ -90,7 +79,6 @@ export default async function generatePdf({
     });
   };
 
-  // TEXT FIELDS
   draw(subject, 158, height - 228);
   draw(requester, 148, height - 188);
   draw(address, 475, height - 188);
@@ -110,7 +98,6 @@ export default async function generatePdf({
     size: 10,
     lineHeight: 12,
   });
-  // draw(wrappedDescription, 66, );
 
   draw(change, 80, height - 400);
 
@@ -121,17 +108,16 @@ export default async function generatePdf({
   draw(initials, 66, 60);
 
   const date = new Date(Date.now());
-  let day = String(date.getDate()).padStart(2, "0");
-  let month = String(date.getMonth() + 1).padStart(2, "0");
-  let year = String(date.getFullYear());
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const year = String(date.getFullYear());
 
   let hours = date.getHours();
-  let minutes = String(date.getMinutes()).padStart(2, "0");
-
+  const minutes = String(date.getMinutes()).padStart(2, "0");
   const ampm = hours >= 12 ? "pm" : "am";
   hours = hours % 12 || 12;
 
-  let hourFormatted = String(hours).padStart(2, "0");
+  const hourFormatted = String(hours).padStart(2, "0");
 
   const signedOn = `Signed on ${day}/${month}/${year} at ${hourFormatted}:${minutes} ${ampm}`;
 
@@ -139,30 +125,24 @@ export default async function generatePdf({
     x: 430,
     y: 30,
     size: 9,
-    // lineHeight:
   });
 
-  // SIGNATURE IMAGE
   if (signatureDataUrl) {
     const signatureImage = await pdfDoc.embedPng(signatureDataUrl);
     const sigWidth = 140;
     const sigHeight = sigWidth * 0.4;
 
     page.drawImage(signatureImage, {
-      x: 80, // adjust if needed
-      y: 100, // adjust if needed
+      x: 80,
+      y: 100,
       width: sigWidth,
       height: sigHeight,
     });
   }
 
-  // Finalize PDF
+  // Return PDF bytes instead of opening
   const pdfBytes = await pdfDoc.save();
-
-  // Open PDF in a new tab
-  const blob = new Blob([pdfBytes], { type: "application/pdf" });
-  const url = URL.createObjectURL(blob);
-  window.open(url, "_blank");
+  return pdfBytes;
 }
 
 // import jsPDF from "jspdf";
