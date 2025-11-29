@@ -2,26 +2,34 @@
 
 import { PDFDocument, rgb, StandardFonts } from "pdf-lib";
 
-function wrapText(text, font, fontSize, maxWidth) {
-  const words = text.split(" ");
-  let lines = [];
-  let currentLine = "";
+function wrapText(text: string, font: any, fontSize: number, maxWidth: number) {
+  const lines: string[] = [];
 
-  for (let w of words) {
-    const testLine = currentLine + (currentLine ? " " : "") + w;
-    const width = font.widthOfTextAtSize(testLine, fontSize);
+  // Split by existing line breaks first
+  const paragraphs = text.split(/\r?\n/);
 
-    if (width > maxWidth) {
-      lines.push(currentLine);
-      currentLine = w;
-    } else {
-      currentLine = testLine;
+  for (const paragraph of paragraphs) {
+    const words = paragraph.split(" ");
+    let currentLine = "";
+
+    for (const w of words) {
+      const testLine = currentLine ? currentLine + " " + w : w;
+      const width = font.widthOfTextAtSize(testLine, fontSize);
+
+      if (width > maxWidth) {
+        lines.push(currentLine);
+        currentLine = w;
+      } else {
+        currentLine = testLine;
+      }
     }
+
+    if (currentLine) lines.push(currentLine);
   }
 
-  if (currentLine) lines.push(currentLine);
   return lines.join("\n");
 }
+
 
 export default async function generatePdf({
   subject,
