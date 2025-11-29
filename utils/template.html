@@ -1,0 +1,49 @@
+<html>
+  <body>
+    <div
+      id="pdf-content"
+      style="width: 800px; padding: 24px; font-family: sans-serif"
+      class="page"
+    >
+        
+      <h2 style="text-align: center">Change Request Form</h2>
+
+      <p><strong>Subject:</strong> ${form.subject}</p>
+      <p><strong>Requested By:</strong> ${form.requester}</p>
+      <p><strong>Address:</strong> ${form.address}</p>
+      <p><strong>Reason:</strong> ${form.reason}</p>
+      <p><strong>Description:</strong><br />${form.description}</p>
+
+      <h3>Impact of Change</h3>
+      <p><strong>Budget:</strong> ${form.impactBudget}</p>
+      <p><strong>Timeline:</strong> ${form.impactTimeline}</p>
+      <p><strong>Resources:</strong> ${form.impactResources}</p>
+
+      <h3>Signature</h3>
+      ${ signatureData ? `<img
+        src="${signatureData}"
+        style="width: 200px; height: auto; border: 1px solid #ccc"
+      />` : `
+      <p>No signature provided</p>
+      ` }
+
+      <p><strong>Initials:</strong> ${form.initials}</p>
+    </div>
+  </body>
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .page {
+      height: calc(297mm - 40mm);
+      width: calc(210mm - 40mm);
+      overflow: hidden;
+    }
+  </style>
+</html>

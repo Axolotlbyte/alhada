@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "jspdf": "^3.0.4",
     "leaflet": "^1.9.4",
-    "next": "15.3.5",
-    "react": "^19.0.0-rc.1",
-    "react-dom": "^19.0.0-rc.1",
+    "next": "^15.3.5",
+    "pdf-lib": "^1.17.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "react-leaflet": "^5.0.0-rc.2",
-    "react-multi-carousel": "^2.8.6"
+    "react-multi-carousel": "^2.8.6",
+    "react-signature-canvas": "^1.1.0-alpha.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
