@@ -27,81 +27,103 @@ export default function Page() {
     setForm({ ...form, [e.target.name]: e.target.value });
 
   const clearSignature = () => {
+    // console.log('cleared')
     if (sigRef.current) {
       sigRef.current.clear();
     }
   };
+  const getSignatureDataUrl = async () => {
+    try {
+      if (!sigRef.current || !sigRef.current.svg) return null;
 
-const getSignatureDataUrl = async () => {
-  if (!sigRef.current || !sigRef.current.svg) return null;
+      const svgEl = sigRef.current.svg.cloneNode(true);
+      const clientWidth = sigRef.current.svg.clientWidth;
+      const clientHeight = sigRef.current.svg.clientHeight;
 
-  const svgEl = sigRef.current.svg.cloneNode(true);
-  const clientWidth = sigRef.current.svg.clientWidth;
-  const clientHeight = sigRef.current.svg.clientHeight;
+      // Clean SVG
+      svgEl.removeAttribute("style");
+      svgEl.setAttribute("width", clientWidth + "px");
+      svgEl.setAttribute("height", clientHeight + "px");
+      svgEl.setAttribute("viewBox", "0 0 " + clientWidth + " " + clientHeight);
 
-  // clean SVG
-  svgEl.removeAttribute("style");
-  svgEl.setAttribute("width", `${clientWidth}px`);
-  svgEl.setAttribute("height", `${clientHeight}px`);
-  svgEl.setAttribute("viewBox", `0 0 ${clientWidth} ${clientHeight}`);
+      const serialized = new XMLSerializer().serializeToString(svgEl);
 
-  const serialized = new XMLSerializer().serializeToString(svgEl);
+      // SVG → DataURL
+      let svgDataUrl;
+      try {
+        const svgBlob = new Blob([serialized], { type: "image/svg+xml" });
+        svgDataUrl = await new Promise((resolve) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = () => resolve(null);
+          reader.readAsDataURL(svgBlob);
+        });
+        if (!svgDataUrl) return null;
+      } catch {
+        return null;
+      }
 
-  // safe UTF-8 → base64
-  const encodedSvg =
-    typeof window !== "undefined"
-      ? window.btoa(
-          new Uint8Array(new TextEncoder().encode(serialized)).reduce(
-            (acc, byte) => acc + String.fromCharCode(byte),
-            ""
-          )
-        )
-      : "";
+      // DataURL → Canvas PNG
+      const canvas = document.createElement("canvas");
+      const ctx = canvas.getContext("2d");
+      const img = new Image();
 
-  // convert SVG → PNG via <canvas>
-  const canvas = document.createElement("canvas");
-  const ctx = canvas.getContext("2d");
+      const pngDataUrl = await new Promise((resolve) => {
+        img.onload = () => {
+          try {
+            canvas.width = clientWidth;
+            canvas.height = clientHeight;
+            ctx.drawImage(img, 0, 0);
+            resolve(canvas.toDataURL("image/png"));
+          } catch {
+            resolve(null);
+          }
+        };
+        img.onerror = () => resolve(null);
+        img.src = svgDataUrl;
+      });
 
-  const img = new Image();
-  const dataUrlPromise = new Promise((resolve) => {
-    img.onload = () => {
-      canvas.width = clientWidth;
-      canvas.height = clientHeight;
-      ctx?.drawImage(img, 0, 0);
-      resolve(canvas.toDataURL("image/png"));
-    };
-  });
+      if (!pngDataUrl) return null;
 
-  img.src = `data:image/svg+xml;base64,${encodedSvg}`;
+      // Detect blank signature
+      const blankCanvas = document.createElement("canvas");
+      blankCanvas.width = canvas.width;
+      blankCanvas.height = canvas.height;
 
-  const pngDataUrl = await dataUrlPromise;
+      if (blankCanvas.toDataURL() === pngDataUrl) return null;
 
-  // detect blank signature
-  const blankCanvas = document.createElement("canvas");
-  blankCanvas.width = canvas.width;
-  blankCanvas.height = canvas.height;
+      return pngDataUrl;
+    } catch (err) {
+      console.error("Signature conversion failed:", err);
+      return null;
+    }
+  };
 
-  if (blankCanvas.toDataURL() === pngDataUrl) return null;
+  const handleGeneratePDF = async () => {
+    // MUST open tab immediately — before awaits.
+    const newTab = window.open("about:blank", "_blank");
 
-  return pngDataUrl;
-};
+    // If popup was blocked, fallback later.
+    const tabRef = newTab;
 
-const handleGeneratePDF = async () => {
-  const signatureDataUrl = await getSignatureDataUrl();
+    const signatureDataUrl = await getSignatureDataUrl();
 
-  const newTab = window.open("", "_blank");
+    const pdfBytes = await generatePdf({
+      ...form,
+      signatureDataUrl,
+    });
 
-  const pdfBytes = await generatePdf({
-    ...form,
-    signatureDataUrl,
-  });
+    const blob = new Blob([pdfBytes], { type: "application/pdf" });
+    const url = URL.createObjectURL(blob);
 
-  const blob = new Blob([pdfBytes], { type: "application/pdf" });
-  const url = URL.createObjectURL(blob);
-
-  if (newTab) newTab.location.href = url;
-  else window.open(url, "_blank");
-};
+    if (tabRef) {
+      // Update already opened tab
+      tabRef.location.href = url;
+    } else {
+      // Fallback if Safari blocks popup
+      window.location.href = url;
+    }
+  };
 
   return (
     <div className="w-full lg:w-1/2 mx-auto p-6 space-y-6">

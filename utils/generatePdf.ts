@@ -142,6 +142,7 @@ export default async function generatePdf({
 
   // Return PDF bytes instead of opening
   const pdfBytes = await pdfDoc.save();
+ 
   return pdfBytes;
 }
 

@@ -64,6 +64,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      {/* <head>
+        <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+        <script>eruda.init();</script>
+      </head> */}
       <body className={`antialiased bg-white text-black w-full select-none`}>
         {/* <Header /> */}
         {children}
@@ -191,7 +195,9 @@ export default function RootLayout({ children }) {
         </footer> */}
         <Footer />
         <div className="flex items-center justify-center pb-2">
-          <p style={{fontSize: "14px"}} className="text-sm">Copyright © 2025 Wadi Al Hada Resort. All rights reserved.</p>
+          <p style={{ fontSize: "14px" }} className="text-sm">
+            Copyright © 2025 Wadi Al Hada Resort. All rights reserved.
+          </p>
         </div>
       </body>
     </html>
