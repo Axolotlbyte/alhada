@@ -1,16 +1,15 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import dynamic from "next/dynamic";
-// import { jsPDF } from "jspdf";
 import generatePdf from "@/utils/generatePdf";
 
-// Dynamically import react-signature-canvas (CRITICAL)
-const SignaturePad = dynamic(() => import("react-signature-canvas"), {
+// Dynamically load @uiw/react-signature
+const Signature = dynamic(() => import("@uiw/react-signature"), {
   ssr: false,
 });
 
 export default function Page() {
-  const sigPadRef = useRef(null);
+  const sigRef = useRef(null);
 
   const [form, setForm] = useState({
     subject: "",
@@ -28,37 +27,84 @@ export default function Page() {
     setForm({ ...form, [e.target.name]: e.target.value });
 
   const clearSignature = () => {
-    if (sigPadRef.current) sigPadRef.current.clear();
-  };
-
-  const handleGeneratePDF = async () => {
-    if (!sigPadRef.current) {
-      return;
+    if (sigRef.current) {
+      sigRef.current.clear();
     }
-
-    const pad = sigPadRef.current;
-    const signatureData = pad.isEmpty()
-      ? null
-      : pad.getTrimmedCanvas().toDataURL("image/png");
-
-    // Open blank tab immediately
-    const newTab = window.open("", "_blank");
-
-    // Create the PDF
-    const pdfBytes = await generatePdf({
-      ...form,
-      signatureDataUrl: signatureData,
-    });
-
-    const blob = new Blob([pdfBytes], { type: "application/pdf" });
-    const url = URL.createObjectURL(blob);
-
-    newTab.location.href = url;
   };
+
+const getSignatureDataUrl = async () => {
+  if (!sigRef.current || !sigRef.current.svg) return null;
+
+  const svgEl = sigRef.current.svg.cloneNode(true);
+  const clientWidth = sigRef.current.svg.clientWidth;
+  const clientHeight = sigRef.current.svg.clientHeight;
+
+  // clean SVG
+  svgEl.removeAttribute("style");
+  svgEl.setAttribute("width", `${clientWidth}px`);
+  svgEl.setAttribute("height", `${clientHeight}px`);
+  svgEl.setAttribute("viewBox", `0 0 ${clientWidth} ${clientHeight}`);
+
+  const serialized = new XMLSerializer().serializeToString(svgEl);
+
+  // safe UTF-8 → base64
+  const encodedSvg =
+    typeof window !== "undefined"
+      ? window.btoa(
+          new Uint8Array(new TextEncoder().encode(serialized)).reduce(
+            (acc, byte) => acc + String.fromCharCode(byte),
+            ""
+          )
+        )
+      : "";
+
+  // convert SVG → PNG via <canvas>
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+
+  const img = new Image();
+  const dataUrlPromise = new Promise((resolve) => {
+    img.onload = () => {
+      canvas.width = clientWidth;
+      canvas.height = clientHeight;
+      ctx?.drawImage(img, 0, 0);
+      resolve(canvas.toDataURL("image/png"));
+    };
+  });
+
+  img.src = `data:image/svg+xml;base64,${encodedSvg}`;
+
+  const pngDataUrl = await dataUrlPromise;
+
+  // detect blank signature
+  const blankCanvas = document.createElement("canvas");
+  blankCanvas.width = canvas.width;
+  blankCanvas.height = canvas.height;
+
+  if (blankCanvas.toDataURL() === pngDataUrl) return null;
+
+  return pngDataUrl;
+};
+
+const handleGeneratePDF = async () => {
+  const signatureDataUrl = await getSignatureDataUrl();
+
+  const newTab = window.open("", "_blank");
+
+  const pdfBytes = await generatePdf({
+    ...form,
+    signatureDataUrl,
+  });
+
+  const blob = new Blob([pdfBytes], { type: "application/pdf" });
+  const url = URL.createObjectURL(blob);
+
+  if (newTab) newTab.location.href = url;
+  else window.open(url, "_blank");
+};
 
   return (
     <div className="w-full lg:w-1/2 mx-auto p-6 space-y-6">
-      {/* Logo */}
       <div className="flex justify-center">
         <img src="/footerLogo.svg" alt="Logo" className="h-auto w-3/12" />
       </div>
@@ -176,19 +222,16 @@ export default function Page() {
 
           <div
             className="relative w-full border bg-white rounded overflow-hidden"
-            style={{ aspectRatio: "5 / 2" }}
+            style={{ aspectRatio: "5/2" }}
           >
             <span className="absolute top-2 text-xs text-green-500 left-2">
               Sign here
             </span>
 
-            {/* SignaturePad loaded only on client */}
-            <SignaturePad
-              ref={sigPadRef}
-              penColor="black"
-              canvasProps={{
-                className: "absolute inset-0 w-full h-full",
-              }}
+            <Signature
+              ref={sigRef}
+              pencolor="black"
+              className="absolute inset-0 w-full h-full"
             />
           </div>
 
